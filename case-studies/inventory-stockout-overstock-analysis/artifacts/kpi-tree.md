@@ -1,4 +1,4 @@
-# KPI Tree
+# 🌳 KPI Tree
 
 Draft placeholder. Will be refined during BA workflow.
 

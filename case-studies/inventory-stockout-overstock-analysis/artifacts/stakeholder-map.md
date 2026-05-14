@@ -1,4 +1,4 @@
-# Stakeholder Map
+# 🗺️ Stakeholder Map
 
 Draft placeholder. Will be refined during BA workflow.
 

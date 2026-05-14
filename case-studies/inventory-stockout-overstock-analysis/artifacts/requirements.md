@@ -1,14 +1,14 @@
-# Requirements
+# 📄 Requirements
 
 Draft placeholder. Will be refined during BA workflow.
 
-## Business Requirements
+## 🧩 Business Requirements
 
 - Identify products with stockout risk
 - Identify products with overstock risk
 - Recommend prioritized actions
 
-## Functional Requirements
+## ⚙️ Functional Requirements
 
 - Load inventory and sales data
 - Calculate inventory KPIs

@@ -1,4 +1,4 @@
-# Assumptions
+# 🧠 Assumptions
 
 - Initial project uses sample or synthetic data if real company data is unavailable.
 - Analysis focuses on interview proof, not production deployment.
