@@ -214,12 +214,14 @@ def print_summary_tables(frames: dict[str, pd.DataFrame], delivery: pd.DataFrame
     segment[["price", "freight_value"]] = segment[["price", "freight_value"]].apply(pd.to_numeric, errors="coerce")
     segment["gross_item_value"] = segment["price"].fillna(0) + segment["freight_value"].fillna(0)
 
+    # Risk severity should average lateness only across late orders; averaging early orders can hide delay pain.
     risk_summary = (
-        segment.groupby(["seller_state", "customer_state", "product_category_name"], dropna=False)
+        segment.assign(days_late_for_late_orders=segment["days_late"].where(segment["late_delivery_flag"]))
+        .groupby(["seller_state", "customer_state", "product_category_name"], dropna=False)
         .agg(
             orders=("order_id", "nunique"),
             late_rate_pct=("late_delivery_flag", lambda s: round(float(s.mean() * 100), 2)),
-            avg_days_late=("days_late", "mean"),
+            avg_days_late_late_orders=("days_late_for_late_orders", "mean"),
             gross_item_value=("gross_item_value", "sum"),
         )
         .reset_index()

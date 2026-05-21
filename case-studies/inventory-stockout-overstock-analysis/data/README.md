@@ -39,6 +39,28 @@ python case-studies/inventory-stockout-overstock-analysis/notebooks/01_olist_del
 
 If data is absent, the script still prints missing-file guidance before importing pandas.
 
+## Optional KaggleHub Download Path
+
+Manual Kaggle download is fine. If you prefer token-based download, keep the token out of shell history and copy only the CSVs into `data/raw/`:
+
+```bash
+python -m pip install kagglehub
+KAGGLE_API_TOKEN="<your-token>" python - <<'PY'
+from pathlib import Path
+import shutil
+import kagglehub
+
+raw = Path("case-studies/inventory-stockout-overstock-analysis/data/raw")
+raw.mkdir(parents=True, exist_ok=True)
+dataset_path = Path(kagglehub.dataset_download("olistbr/brazilian-ecommerce"))
+for csv_path in dataset_path.rglob("*.csv"):
+    shutil.copy2(csv_path, raw / csv_path.name)
+PY
+python case-studies/inventory-stockout-overstock-analysis/notebooks/01_olist_delivery_risk_foundation.py
+```
+
+`data/raw/*.csv` is ignored by git; verify with `git status --short --ignored case-studies/inventory-stockout-overstock-analysis/data/raw` before committing.
+
 ## Folder Policy
 
 ```text
