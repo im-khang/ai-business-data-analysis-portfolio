@@ -1,26 +1,47 @@
-# 🤖 AI Business Data Analysis Portfolio
+# 🤖 AI-Assisted BA/DA Portfolio
 
-This repository showcases an end-to-end **Business Data Analysis** project using AI as a BA/DA work partner.
+Recruiter-first proof: AI-assisted Business Analysis + Data Analysis applied to real ecommerce fulfillment risk.
 
-## 🎯 Goal
+## 🚚 Main Case Study: Olist Delivery SLA Risk
 
-Build interview-ready proof that I can use AI to solve business problems through structured BA workflow, data analysis, and business communication.
+**Business problem:** ecommerce marketplaces lose trust when seller, category, and region lanes miss delivery promises. This project uses real Olist order data to identify delivery SLA risk, prioritize investigation candidates, and connect delay severity to customer review outcomes.
 
-## 📦 Main Case Study
+**Positioning:** fulfillment and delivery SLA risk analysis with fulfillment-planning proxy signals. Olist does **not** include direct inventory, replenishment, backorder, or inventory-balance fields, so inventory language here means proxy/investigation signal only — not direct stockout or overstock measurement.
 
-### 📊 Inventory Stockout/Overstock Analysis
+## 📌 Verified Real-Data Findings
 
-Business context: ecommerce/logistics companies need to balance product availability and inventory cost.
+From delivered Olist orders:
 
-Planned workflow:
+| Metric | Result |
+|---|---:|
+| Delivered orders analyzed | 96,470 |
+| Late delivered orders | 6,534 |
+| Late delivery rate | 6.77% |
+| Average delivery days | 12.09 |
+| Average days late among late orders | 10.62 |
 
-1. 🧭 Define business problem and stakeholders
-2. 📝 Map assumptions and requirements
-3. 🌳 Build KPI tree
-4. 🔎 Analyze inventory and demand data
-5. 📈 Create dashboard
-6. 💡 Recommend business actions
-7. 🤖 Document AI-assisted decision process
+What matters:
+
+- **Delivery risk exists but is concentrated.** Most orders meet promise, but specific seller/category/region lanes create investigation targets.
+- **Late orders are materially late.** Average lateness among late orders is 10.62 days, enough to affect customer experience and operational workload.
+- **Review scores are associated with delay bands.** On-time/early orders average 4.29 review score; 4-7 day late orders average 2.11; 8-14 day late orders average 1.67. This shows association, not single-cause proof.
+- **Inventory framing stays honest.** Delivery delay, demand velocity, category, seller, and region patterns are triage signals for fulfillment-planning investigation, not proof of stockouts or overstock without inventory snapshots.
+
+## 🔗 Findings Artifacts
+
+- [Delivery SLA Summary](case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md)
+- [Seller / Category / Region Risk Prioritization](case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md)
+- [Review Impact Summary](case-studies/inventory-stockout-overstock-analysis/artifacts/review-impact-summary.md)
+- [Full Case Study Folder](case-studies/inventory-stockout-overstock-analysis/README.md)
+
+## ✅ What This Portfolio Proves
+
+- BA problem framing for ecommerce operations and logistics stakeholders
+- KPI logic from 96,470 delivered orders, 6.77% late rate, and 10.62 average days late
+- SQL/Python analysis across multi-table public marketplace data
+- Seller/category/region risk queue for operational investigation candidates
+- Review-score delay-band analysis with causality caveats
+- AI-assisted workflow discipline without replacing analytical judgment
 
 ## 🗂️ Repository Structure
 
@@ -28,26 +49,23 @@ Planned workflow:
 case-studies/
   inventory-stockout-overstock-analysis/
     README.md
-    data/
-    notebooks/
-    sql/
-    dashboard/
     artifacts/
+      delivery-sla-summary.md
+      seller-category-region-risk.md
+      review-impact-summary.md
       stakeholder-map.md
       requirements.md
       kpi-tree.md
       process-flow.md
       assumptions.md
+    sql/
+    notebooks/
+    data/
+    dashboard/
 ai-workflow-log/
-  prompts-and-decisions.md
 docs/
 ```
 
-## ✅ What This Portfolio Proves
+## 🧭 Data Honesty
 
-- 🧩 Business problem framing
-- 📄 BA artifact creation
-- 📊 Business Data Analysis thinking
-- 🛠️ SQL/Python/dashboard workflow
-- 🤖 AI-assisted research and requirements work
-- 🎤 Interview-ready storytelling
+Raw Olist CSVs are local-only and ignored by git. Public repo contains analysis code, SQL, BA artifacts, and findings summaries. See [data setup notes](case-studies/inventory-stockout-overstock-analysis/data/README.md) for source and local placement. Inventory, stockout, and overstock wording is proxy-only because Olist lacks direct inventory fields.
