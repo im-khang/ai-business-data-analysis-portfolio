@@ -11,3 +11,13 @@ venv/
 *.tmp
 
 .a0proj/
+
+# Olist public dataset / analysis outputs
+case-studies/inventory-stockout-overstock-analysis/data/raw/*.csv
+case-studies/inventory-stockout-overstock-analysis/data/raw/*.zip
+case-studies/inventory-stockout-overstock-analysis/data/interim/*
+!case-studies/inventory-stockout-overstock-analysis/data/interim/.gitkeep
+case-studies/inventory-stockout-overstock-analysis/data/processed/*
+!case-studies/inventory-stockout-overstock-analysis/data/processed/.gitkeep
+case-studies/inventory-stockout-overstock-analysis/notebooks/.ipynb_checkpoints/
+**/.ipynb_checkpoints/

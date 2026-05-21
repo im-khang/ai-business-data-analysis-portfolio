@@ -1,31 +1,60 @@
-# 📊 Case Study: Inventory Stockout/Overstock Analysis
+# 🚚 Olist Delivery Risk & Inventory Proxy Case Study
 
-## 🧩 Business Problem
+This case study analyzes **ecommerce fulfillment and delivery SLA risk** using the public Olist Brazilian E-Commerce dataset. It is not a generic sales dashboard. The goal is to show where marketplace delivery risk concentrates across sellers, product categories, customer regions, and order patterns, then explain what operations teams should investigate first.
 
-Ecommerce and logistics teams need to avoid two costly inventory failures:
+## 🎯 Business Question
 
-- 📉 **Stockout:** lost sales because products are unavailable
-- 📦 **Overstock:** cash tied up in slow-moving inventory
+Which sellers, categories, regions, and order patterns create the highest delivery SLA risk, how does late delivery affect customer review outcomes, and what inventory-risk proxy signals can be identified without claiming direct stockout/overstock certainty?
 
-## ❓ Business Question
+## 🧭 Reviewer Guide
 
-Which products are most at risk of stockout or overstock, and what actions should the business prioritize?
+Start here:
 
-## 👥 Target Audience
+1. `artifacts/kpi-tree.md` — KPI definitions, business interpretation, and action paths.
+2. `artifacts/assumptions.md` — data limitations and inventory proxy rules.
+3. `sql/00_schema_overview.sql` — source table map and join logic.
+4. `sql/01_delivery_sla_metrics.sql` — order-level delivery KPI logic.
+5. `sql/02_seller_category_region_risk.sql` — seller/category/geography risk segmentation.
+6. `sql/03_inventory_proxy_metrics.sql` — demand velocity proxy logic with limitations.
+7. `notebooks/01_olist_delivery_risk_foundation.py` — runnable pandas foundation script.
 
-- Inventory planner
-- Operations manager
-- Ecommerce manager
-- Hiring manager/interviewer
+## 📦 Data Setup
 
-## 📌 Planned Deliverables
+Download the public Olist dataset from Kaggle:
 
-- 🗺️ Stakeholder map
-- 📄 Requirements document
-- 🌳 KPI tree
-- 🔄 Process flow
-- 📓 Data analysis notebook
-- 🧮 SQL queries
-- 📈 Dashboard
-- 💡 Business recommendations
-- 🤖 AI workflow log
+<https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce>
+
+Place CSV files in:
+
+```text
+case-studies/inventory-stockout-overstock-analysis/data/raw/
+```
+
+See `data/README.md` for exact filenames and folder policy. Raw CSVs and generated outputs are ignored by git.
+
+## ▶️ Run Order
+
+From repo root:
+
+```bash
+python case-studies/inventory-stockout-overstock-analysis/notebooks/01_olist_delivery_risk_foundation.py
+```
+
+If data is missing, the script prints clear setup guidance. If data is present, it loads core tables, validates required columns, creates delivery timing metrics, and prints first summary tables.
+
+## 📊 Analysis Foundation
+
+The foundation covers:
+
+- delivery promise vs actual delivery date
+- late delivery rate and days-late bands
+- fulfillment lead time and carrier transit time
+- seller/category/customer-region risk segmentation
+- optional review-score impact when reviews data is available
+- demand velocity and volatility as inventory-risk proxy signals
+
+## ⚠️ Inventory Proxy Limitation
+
+Olist does **not** include stock-on-hand, replenishment, warehouse availability, purchase orders, or backorder fields. This project therefore does not claim direct stockout or overstock measurement. Inventory risk is framed as proxy analysis using demand velocity, volatility, category/seller patterns, and delivery performance.
+
+Production-grade inventory decisions would require additional company data such as inventory snapshots, lead times, supplier constraints, replenishment orders, warehouse capacity, and lost-sales records.
