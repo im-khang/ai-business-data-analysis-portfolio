@@ -32,6 +32,14 @@ case-studies/inventory-stockout-overstock-analysis/data/raw/
 
 See `data/README.md` for exact filenames and folder policy. Raw CSVs and generated outputs are ignored by git.
 
+Create a local Python environment and install pandas:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip pandas
+```
+
 ## ▶️ Run Order
 
 From repo root:

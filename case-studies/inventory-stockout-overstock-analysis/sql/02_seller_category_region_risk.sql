@@ -12,8 +12,8 @@ WITH order_item_risk AS (
         c.customer_state,
         c.customer_city,
         p.product_category_name,
-        oi.price,
-        oi.freight_value,
+        COALESCE(oi.price, 0) AS price,
+        COALESCE(oi.freight_value, 0) AS freight_value,
         CAST(o.order_delivered_customer_date AS TIMESTAMP) AS customer_delivered_at,
         CAST(o.order_estimated_delivery_date AS TIMESTAMP) AS estimated_delivery_at,
         CASE
@@ -37,7 +37,7 @@ segment_risk AS (
         product_category_name,
         COUNT(DISTINCT order_id) AS orders,
         COUNT(*) AS order_items,
-        SUM(price + freight_value) AS gross_item_value,
+        SUM(COALESCE(price, 0) + COALESCE(freight_value, 0)) AS gross_item_value,
         COUNT(DISTINCT CASE WHEN late_delivery_flag = 1 THEN order_id END) AS late_orders,
         ROUND(100.0 * COUNT(DISTINCT CASE WHEN late_delivery_flag = 1 THEN order_id END) / NULLIF(COUNT(DISTINCT order_id), 0), 2) AS late_order_rate_pct
     FROM order_item_risk

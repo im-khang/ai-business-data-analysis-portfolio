@@ -10,8 +10,8 @@ WITH product_monthly_demand AS (
         oi.seller_id,
         DATE_TRUNC('month', CAST(o.order_purchase_timestamp AS TIMESTAMP)) AS order_month,
         COUNT(DISTINCT o.order_id) AS orders,
-        SUM(oi.price) AS item_revenue,
-        AVG(oi.freight_value) AS avg_freight_value
+        SUM(COALESCE(oi.price, 0)) AS item_revenue,
+        AVG(COALESCE(oi.freight_value, 0)) AS avg_freight_value
     FROM olist_orders o
     JOIN olist_order_items oi ON o.order_id = oi.order_id
     JOIN olist_products p ON oi.product_id = p.product_id
@@ -28,7 +28,7 @@ velocity_proxy AS (
         AVG(orders) AS avg_monthly_orders,
         MAX(orders) AS peak_monthly_orders,
         COALESCE(STDDEV(orders), 0) AS monthly_order_volatility,
-        SUM(item_revenue) AS total_item_revenue
+        SUM(COALESCE(item_revenue, 0)) AS total_item_revenue
     FROM product_monthly_demand
     GROUP BY product_category_name, product_id, seller_id
 ),

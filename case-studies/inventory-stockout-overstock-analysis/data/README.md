@@ -26,6 +26,19 @@ Optional but recommended:
 - `olist_order_payments_dataset.csv`
 - `product_category_name_translation.csv`
 
+## Python Environment
+
+The foundation script needs pandas after CSV files are present. From repo root, use one local setup path:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip pandas
+python case-studies/inventory-stockout-overstock-analysis/notebooks/01_olist_delivery_risk_foundation.py
+```
+
+If data is absent, the script still prints missing-file guidance before importing pandas.
+
 ## Folder Policy
 
 ```text

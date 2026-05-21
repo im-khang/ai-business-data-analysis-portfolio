@@ -17,6 +17,8 @@ from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     import pandas as pd
+else:
+    pd = None
 
 CASE_DIR = Path(__file__).resolve().parents[1]
 RAW_DIR = CASE_DIR / "data" / "raw"
@@ -85,8 +87,10 @@ def load_csvs() -> dict[str, pd.DataFrame] | None:
         print_missing_file_guidance(missing)
         return None
 
+    global pd
     try:
-        import pandas as pd
+        import pandas as pandas_module
+        pd = pandas_module
     except ModuleNotFoundError as exc:
         raise ModuleNotFoundError(
             "pandas is required after Olist CSVs are present. Install pandas in your local analysis environment, then rerun."
@@ -164,7 +168,7 @@ def build_delivery_metrics(frames: dict[str, pd.DataFrame]) -> pd.DataFrame:
     delivered["late_delivery_flag"] = delivered["days_late"].gt(0)
     delivered["delay_band"] = pd.cut(
         delivered["days_late"],
-        bins=[-9999, 0, 3, 7, 14, 9999],
+        bins=[float("-inf"), 0, 3, 7, 14, float("inf")],
         labels=["On time / early", "1-3 days late", "4-7 days late", "8-14 days late", "15+ days late"],
     ).cat.add_categories(["Unknown"]).fillna("Unknown")
     return delivered
@@ -186,7 +190,7 @@ def print_summary_tables(frames: dict[str, pd.DataFrame], delivery: pd.DataFrame
                 "late_orders": [int(delivery["late_delivery_flag"].sum())],
                 "late_delivery_rate_pct": [round(delivery["late_delivery_flag"].mean() * 100, 2)],
                 "avg_total_delivery_days": [round(delivery["total_delivery_days"].mean(), 2)],
-                "avg_days_late": [round(delivery.loc[delivery["late_delivery_flag"], "days_late"].mean(), 2)],
+                "avg_days_late": [round(delivery.loc[delivery["late_delivery_flag"], "days_late"].mean(), 2) if delivery["late_delivery_flag"].any() else 0.0],
             }
         ).to_string(index=False)
     )
@@ -231,6 +235,15 @@ def print_summary_tables(frames: dict[str, pd.DataFrame], delivery: pd.DataFrame
 
     if "reviews" in frames:
         reviews = frames["reviews"][["order_id", "review_score"]].dropna(subset=["order_id"]).drop_duplicates("order_id")
+        reviews["review_score"] = pd.to_numeric(reviews["review_score"], errors="coerce")
+        dropped_review_scores = int(reviews["review_score"].isna().sum())
+        if dropped_review_scores:
+            print(f"Warning: dropped {dropped_review_scores} reviews with nonnumeric review_score.")
+        reviews = reviews.dropna(subset=["review_score"])
+        if reviews.empty:
+            print("\n=== Review Impact ===")
+            print("Skipped: optional reviews data has no numeric review_score values.")
+            return
         review_impact = (
             delivery[["order_id", "late_delivery_flag", "delay_band"]]
             .merge(reviews, on="order_id", how="inner")
