@@ -12,17 +12,21 @@ function pct(value) { return `${Number(value).toFixed(2)}%`; }
 
 function renderCards(kpis) {
   const cards = [
-    ['Delivered orders', number(kpis.delivered_orders)],
-    ['Late delivered orders', number(kpis.late_orders)],
-    ['Late delivery rate', pct(kpis.late_delivery_rate_pct)],
-    ['Avg delivery days', Number(kpis.avg_delivery_days).toFixed(2)],
-    ['Avg days late among late orders', Number(kpis.avg_days_late_late_orders).toFixed(2)],
+    ['Delivered orders', number(kpis.delivered_orders), 'Evidence base for SLA sizing'],
+    ['Late delivered orders', number(kpis.late_orders), 'Primary exposure volume'],
+    ['Late delivery rate', pct(kpis.late_delivery_rate_pct), 'Portfolio KPI for SLA risk'],
+    ['Avg delivery days', Number(kpis.avg_delivery_days).toFixed(2), 'Baseline customer wait'],
+    ['Avg days late among late orders', Number(kpis.avg_days_late_late_orders).toFixed(2), 'Severity among missed promises'],
   ];
-  document.getElementById('kpi-cards').innerHTML = cards.map(([label, value]) => `<article class="card"><span>${label}</span><strong>${value}</strong></article>`).join('');
+  document.getElementById('kpi-cards').innerHTML = cards.map(([label, value, note]) => `<article class="card"><span>${label}</span><strong>${value}</strong><em>${note}</em></article>`).join('');
 }
 
 function layout(title, extra = {}) {
   return {title, paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)', font: {color: '#e5e7eb'}, margin: {t: 48, r: 24, b: 90, l: 60}, ...extra};
+}
+
+function ensurePlotly() {
+  if (!window.Plotly) throw new Error('Plotly library failed to load; check CDN access before reviewing dashboard charts.');
 }
 
 function renderDelayBands(rows) {
@@ -39,11 +43,12 @@ function renderMonthly(rows) {
 
 function renderRiskSegments(rows) {
   const labels = rows.map(r => `${r.seller_state || 'NA'} → ${r.customer_state || 'NA'} · ${r.category || 'Unknown'}`);
-  Plotly.newPlot('risk-segments', [{type: 'bar', orientation: 'h', x: rows.map(r => r.late_orders), y: labels, marker: {color: rows.map(r => r.late_rate_pct), colorscale: 'YlOrRd'}, text: rows.map(r => `${r.late_rate_pct}% late`), hovertemplate: '%{y}<br>Late orders: %{x:,}<br>%{text}<extra></extra>'}], layout('Top investigation candidates by late orders', {margin: {t: 48, r: 24, b: 60, l: 260}, yaxis: {automargin: true}}), chartConfig);
+  Plotly.newPlot('risk-segments', [{type: 'bar', orientation: 'h', x: rows.map(r => r.late_orders), y: labels, marker: {color: rows.map(r => r.late_rate_pct), colorscale: 'YlOrRd'}, text: rows.map(r => `${r.late_rate_pct}% late`), hovertemplate: '%{y}<br>Late orders: %{x:,}<br>%{text}<br>Investigation candidate, not proven cause<extra></extra>'}], layout('Top investigation candidates by late orders', {margin: {t: 48, r: 24, b: 60, l: 260}, yaxis: {automargin: true}}), chartConfig);
 }
 
 async function main() {
   try {
+    ensurePlotly();
     const [kpis, delayBands, reviewImpact, riskSegments, monthlyTrend, metadata] = await Promise.all(['kpis.json','delay_bands.json','review_impact.json','risk_segments.json','monthly_sla_trend.json','build_metadata.json'].map(loadJson));
     renderCards(kpis); renderDelayBands(delayBands); renderReviewImpact(reviewImpact); renderMonthly(monthlyTrend); renderRiskSegments(riskSegments);
     document.getElementById('build-note').textContent = `${metadata.privacy_note} Generated: ${metadata.generated_at_utc}.`;

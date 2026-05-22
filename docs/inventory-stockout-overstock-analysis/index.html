@@ -8,12 +8,35 @@
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body>
-  <header class="hero">
+  <header class="hero" id="top">
     <p class="eyebrow">AI-assisted BA/DA portfolio · ecommerce operations</p>
-    <h1>Olist Delivery SLA Risk Dashboard</h1>
-    <p class="lede">Static GitHub Pages decision view for late delivery concentration, review-score association, and fulfillment-planning proxy signals.</p>
+    <div class="hero-grid">
+      <div>
+        <h1>Which delivery SLA risks deserve operations attention first?</h1>
+        <p class="lede">Hiring-manager decision view for the Olist case study: size late-delivery exposure, connect it to customer review impact, isolate seller/category/region investigation candidates, then choose practical next actions.</p>
+        <div class="chip-row" aria-label="Evidence caveats">
+          <span class="chip">Aggregate-only public data</span>
+          <span class="chip">Association, not causality</span>
+          <span class="chip">Proxy signal, not inventory proof</span>
+          <span class="chip">Investigation candidates, not blame list</span>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Decision story">
+        <h2>Decision story</h2>
+        <ol>
+          <li><strong>SLA risk:</strong> identify late delivery exposure.</li>
+          <li><strong>Customer impact:</strong> compare review-score association by delay band.</li>
+          <li><strong>Triage:</strong> rank seller/category/region investigation candidates.</li>
+          <li><strong>Act:</strong> audit promises, fulfillment handoffs, carrier routes, and company-owned inventory snapshots before production decisions.</li>
+        </ol>
+      </aside>
+    </div>
     <p class="limitation">Data honesty: Olist does not include direct inventory, replenishment, warehouse availability, or backorder fields. Inventory wording here means proxy investigation signal only.</p>
-    <nav>
+    <nav class="site-nav" aria-label="Dashboard navigation">
+      <a href="#evidence">Evidence</a>
+      <a href="#decision-logic">Decision Logic</a>
+      <a href="#investigation-candidates">Investigation Candidates</a>
+      <a href="#method-notes">Caveats</a>
       <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/README.md">Portfolio README</a>
       <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Case study</a>
       <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA summary</a>
@@ -21,14 +44,49 @@
   </header>
 
   <main>
-    <section class="cards" id="kpi-cards" aria-label="Verified delivery SLA metrics"></section>
-    <section class="grid">
-      <article class="panel"><h2>Delay bands</h2><div id="delay-bands" class="chart"></div></article>
-      <article class="panel"><h2>Review impact association</h2><div id="review-impact" class="chart"></div></article>
-      <article class="panel wide"><h2>Monthly SLA trend</h2><div id="monthly-trend" class="chart"></div></article>
-      <article class="panel wide"><h2>Seller / category / region investigation queue</h2><div id="risk-segments" class="chart"></div></article>
+    <section id="evidence" aria-label="Verified delivery SLA metrics"><div class="cards" id="kpi-cards"></div></section>
+
+    <section id="decision-logic" class="panel decision-panel">
+      <div>
+        <p class="section-kicker">Hiring-manager readout</p>
+        <h2>Decision Logic / Action Priority</h2>
+        <p>This dashboard demonstrates KPI framing, caveat control, stakeholder-aware interpretation, and operations triage without overstating what public Olist data can prove.</p>
+      </div>
+      <div class="priority-grid" aria-label="Action priority steps">
+        <article><span>1</span><h3>Size SLA exposure</h3><p>Start with late-order volume and late rate to judge business materiality.</p></article>
+        <article><span>2</span><h3>Check customer pain</h3><p>Use review-score association to decide whether delay severity deserves escalation.</p></article>
+        <article><span>3</span><h3>Pick candidates</h3><p>Prioritize seller/category/region combinations with meaningful late volume.</p></article>
+        <article><span>4</span><h3>Act with controls</h3><p>Review delivery promises, carrier lanes, seller handoffs, and company-owned inventory snapshots before changing operations policy.</p></article>
+      </div>
     </section>
-    <section class="panel notes">
+
+    <section class="grid" aria-label="Delivery SLA evidence charts">
+      <article class="panel">
+        <h2>Delay bands</h2>
+        <div id="delay-bands" class="chart"></div>
+        <p class="so-what"><strong>So what?</strong> Shows whether late delivery is concentrated in mild misses or severe delays that need escalation.</p>
+      </article>
+      <article class="panel">
+        <h2>Review impact association</h2>
+        <div id="review-impact" class="chart"></div>
+        <p class="so-what"><strong>So what?</strong> Connects SLA misses to customer experience signals while staying clear that reviews are associated with delay bands, not proof of one cause.</p>
+      </article>
+      <article class="panel wide">
+        <h2>Monthly SLA trend</h2>
+        <div id="monthly-trend" class="chart"></div>
+        <p class="so-what"><strong>So what?</strong> Helps separate persistent SLA exposure from period-specific spikes that need deeper operational review.</p>
+      </article>
+      <article id="investigation-candidates" class="panel wide">
+        <div class="panel-title-row">
+          <h2>Seller / category / region investigation candidates</h2>
+          <span class="chip small">Candidate queue</span>
+        </div>
+        <div id="risk-segments" class="chart"></div>
+        <p class="so-what"><strong>So what?</strong> Ranks where an operations team should investigate first; it does not prove seller fault, inventory shortage, or carrier root cause.</p>
+      </article>
+    </section>
+
+    <section id="method-notes" class="panel notes">
       <h2>How to read this</h2>
       <ul>
         <li>Use high late-order counts and late-rate segments as investigation candidates, not proof of root cause.</li>
