@@ -1,0 +1,32 @@
+[
+  {
+    "delay_band": "On time / early",
+    "late_delivery_flag": false,
+    "orders": 88163,
+    "avg_review_score": 4.29
+  },
+  {
+    "delay_band": "1-3 days late",
+    "late_delivery_flag": true,
+    "orders": 2636,
+    "avg_review_score": 3.76
+  },
+  {
+    "delay_band": "4-7 days late",
+    "late_delivery_flag": true,
+    "orders": 1773,
+    "avg_review_score": 2.32
+  },
+  {
+    "delay_band": "8-14 days late",
+    "late_delivery_flag": true,
+    "orders": 1748,
+    "avg_review_score": 1.75
+  },
+  {
+    "delay_band": "15+ days late",
+    "late_delivery_flag": true,
+    "orders": 1504,
+    "avg_review_score": 1.71
+  }
+]

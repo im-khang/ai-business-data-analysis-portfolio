@@ -1,0 +1,8 @@
+{
+  "delivered_orders": 96470,
+  "late_orders": 7826,
+  "late_delivery_rate_pct": 8.11,
+  "avg_delivery_days": 12.56,
+  "avg_days_late_late_orders": 9.55,
+  "positioning_note": "Inventory language is proxy-only: Olist lacks direct inventory, replenishment, warehouse availability, and backorder fields."
+}

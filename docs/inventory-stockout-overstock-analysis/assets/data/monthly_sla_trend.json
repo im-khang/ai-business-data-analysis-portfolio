@@ -1,0 +1,128 @@
+[
+  {
+    "purchase_month": "2016-10",
+    "orders": 265,
+    "late_rate_pct": 1.13,
+    "avg_delivery_days": 19.6
+  },
+  {
+    "purchase_month": "2017-01",
+    "orders": 750,
+    "late_rate_pct": 3.07,
+    "avg_delivery_days": 12.65
+  },
+  {
+    "purchase_month": "2017-02",
+    "orders": 1653,
+    "late_rate_pct": 3.21,
+    "avg_delivery_days": 13.17
+  },
+  {
+    "purchase_month": "2017-03",
+    "orders": 2546,
+    "late_rate_pct": 5.58,
+    "avg_delivery_days": 12.95
+  },
+  {
+    "purchase_month": "2017-04",
+    "orders": 2303,
+    "late_rate_pct": 7.86,
+    "avg_delivery_days": 14.92
+  },
+  {
+    "purchase_month": "2017-05",
+    "orders": 3545,
+    "late_rate_pct": 3.61,
+    "avg_delivery_days": 11.32
+  },
+  {
+    "purchase_month": "2017-06",
+    "orders": 3135,
+    "late_rate_pct": 3.86,
+    "avg_delivery_days": 12.01
+  },
+  {
+    "purchase_month": "2017-07",
+    "orders": 3872,
+    "late_rate_pct": 3.43,
+    "avg_delivery_days": 11.59
+  },
+  {
+    "purchase_month": "2017-08",
+    "orders": 4193,
+    "late_rate_pct": 3.32,
+    "avg_delivery_days": 11.15
+  },
+  {
+    "purchase_month": "2017-09",
+    "orders": 4150,
+    "late_rate_pct": 5.2,
+    "avg_delivery_days": 11.85
+  },
+  {
+    "purchase_month": "2017-10",
+    "orders": 4478,
+    "late_rate_pct": 5.29,
+    "avg_delivery_days": 11.86
+  },
+  {
+    "purchase_month": "2017-11",
+    "orders": 7288,
+    "late_rate_pct": 14.31,
+    "avg_delivery_days": 15.16
+  },
+  {
+    "purchase_month": "2017-12",
+    "orders": 5513,
+    "late_rate_pct": 8.38,
+    "avg_delivery_days": 15.39
+  },
+  {
+    "purchase_month": "2018-01",
+    "orders": 7069,
+    "late_rate_pct": 6.56,
+    "avg_delivery_days": 14.08
+  },
+  {
+    "purchase_month": "2018-02",
+    "orders": 6555,
+    "late_rate_pct": 15.99,
+    "avg_delivery_days": 16.95
+  },
+  {
+    "purchase_month": "2018-03",
+    "orders": 7003,
+    "late_rate_pct": 21.36,
+    "avg_delivery_days": 16.3
+  },
+  {
+    "purchase_month": "2018-04",
+    "orders": 6798,
+    "late_rate_pct": 5.31,
+    "avg_delivery_days": 11.5
+  },
+  {
+    "purchase_month": "2018-05",
+    "orders": 6749,
+    "late_rate_pct": 8.24,
+    "avg_delivery_days": 11.42
+  },
+  {
+    "purchase_month": "2018-06",
+    "orders": 6096,
+    "late_rate_pct": 1.36,
+    "avg_delivery_days": 9.24
+  },
+  {
+    "purchase_month": "2018-07",
+    "orders": 6156,
+    "late_rate_pct": 4.48,
+    "avg_delivery_days": 8.96
+  },
+  {
+    "purchase_month": "2018-08",
+    "orders": 6351,
+    "late_rate_pct": 10.39,
+    "avg_delivery_days": 7.73
+  }
+]

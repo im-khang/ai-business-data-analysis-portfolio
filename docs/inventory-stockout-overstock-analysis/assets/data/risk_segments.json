@@ -1,0 +1,152 @@
+[
+  {
+    "seller_state": "SP",
+    "customer_state": "RJ",
+    "category": "bed_bath_table",
+    "orders": 1189,
+    "late_orders": 210,
+    "avg_days_late_late_orders": 12.53,
+    "gross_value": 152235.59,
+    "late_rate_pct": 17.66
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "category": "bed_bath_table",
+    "orders": 3919,
+    "late_orders": 192,
+    "avg_days_late_late_orders": 7.6,
+    "gross_value": 485567.06,
+    "late_rate_pct": 4.9
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "category": "health_beauty",
+    "orders": 2717,
+    "late_orders": 188,
+    "avg_days_late_late_orders": 5.26,
+    "gross_value": 321604.8,
+    "late_rate_pct": 6.92
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "category": "housewares",
+    "orders": 2061,
+    "late_orders": 137,
+    "avg_days_late_late_orders": 6.76,
+    "gross_value": 218309.55,
+    "late_rate_pct": 6.65
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "category": "sports_leisure",
+    "orders": 2215,
+    "late_orders": 136,
+    "avg_days_late_late_orders": 6.57,
+    "gross_value": 280661.52,
+    "late_rate_pct": 6.14
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "category": "furniture_decor",
+    "orders": 2046,
+    "late_orders": 124,
+    "avg_days_late_late_orders": 7.62,
+    "gross_value": 238978.12,
+    "late_rate_pct": 6.06
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "category": "watches_gifts",
+    "orders": 1768,
+    "late_orders": 108,
+    "avg_days_late_late_orders": 7.34,
+    "gross_value": 369417.56,
+    "late_rate_pct": 6.11
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "RJ",
+    "category": "watches_gifts",
+    "orders": 638,
+    "late_orders": 105,
+    "avg_days_late_late_orders": 10.95,
+    "gross_value": 147419.51,
+    "late_rate_pct": 16.46
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "category": "auto",
+    "orders": 1338,
+    "late_orders": 99,
+    "avg_days_late_late_orders": 7.05,
+    "gross_value": 175577.37,
+    "late_rate_pct": 7.4
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "RJ",
+    "category": "sports_leisure",
+    "orders": 513,
+    "late_orders": 92,
+    "avg_days_late_late_orders": 13.11,
+    "gross_value": 78193.87,
+    "late_rate_pct": 17.93
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "RJ",
+    "category": "furniture_decor",
+    "orders": 582,
+    "late_orders": 88,
+    "avg_days_late_late_orders": 14.39,
+    "gross_value": 82891.89,
+    "late_rate_pct": 15.12
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "category": "computers_accessories",
+    "orders": 1304,
+    "late_orders": 83,
+    "avg_days_late_late_orders": 6.0,
+    "gross_value": 160976.6,
+    "late_rate_pct": 6.37
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "SP",
+    "category": "telephony",
+    "orders": 1341,
+    "late_orders": 82,
+    "avg_days_late_late_orders": 5.64,
+    "gross_value": 82070.2,
+    "late_rate_pct": 6.11
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "MG",
+    "category": "bed_bath_table",
+    "orders": 970,
+    "late_orders": 81,
+    "avg_days_late_late_orders": 6.62,
+    "gross_value": 134904.22,
+    "late_rate_pct": 8.35
+  },
+  {
+    "seller_state": "SP",
+    "customer_state": "RJ",
+    "category": "health_beauty",
+    "orders": 516,
+    "late_orders": 69,
+    "avg_days_late_late_orders": 14.11,
+    "gross_value": 75257.16,
+    "late_rate_pct": 13.37
+  }
+]

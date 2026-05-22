@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olist Delivery SLA Risk Dashboard</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">AI-assisted BA/DA portfolio · ecommerce operations</p>
+    <h1>Olist Delivery SLA Risk Dashboard</h1>
+    <p class="lede">Static GitHub Pages decision view for late delivery concentration, review-score association, and fulfillment-planning proxy signals.</p>
+    <p class="limitation">Data honesty: Olist does not include direct inventory, replenishment, warehouse availability, or backorder fields. Inventory wording here means proxy investigation signal only.</p>
+    <nav>
+      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/README.md">Portfolio README</a>
+      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Case study</a>
+      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA summary</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cards" id="kpi-cards" aria-label="Verified delivery SLA metrics"></section>
+    <section class="grid">
+      <article class="panel"><h2>Delay bands</h2><div id="delay-bands" class="chart"></div></article>
+      <article class="panel"><h2>Review impact association</h2><div id="review-impact" class="chart"></div></article>
+      <article class="panel wide"><h2>Monthly SLA trend</h2><div id="monthly-trend" class="chart"></div></article>
+      <article class="panel wide"><h2>Seller / category / region investigation queue</h2><div id="risk-segments" class="chart"></div></article>
+    </section>
+    <section class="panel notes">
+      <h2>How to read this</h2>
+      <ul>
+        <li>Use high late-order counts and late-rate segments as investigation candidates, not proof of root cause.</li>
+        <li>Review-score patterns show association with delivery delay, not single-cause proof.</li>
+        <li>Fulfillment-planning proxy signals require company inventory snapshots before production stock decisions.</li>
+      </ul>
+      <p id="build-note"></p>
+    </section>
+    <section id="error" class="error" hidden></section>
+  </main>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

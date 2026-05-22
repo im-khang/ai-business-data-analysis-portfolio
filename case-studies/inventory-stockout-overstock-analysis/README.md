@@ -10,13 +10,14 @@ Which sellers, categories, regions, and order patterns create the highest delive
 
 Start here:
 
-1. `artifacts/kpi-tree.md` — KPI definitions, business interpretation, and action paths.
-2. `artifacts/assumptions.md` — data limitations and inventory proxy rules.
-3. `sql/00_schema_overview.sql` — source table map and join logic.
-4. `sql/01_delivery_sla_metrics.sql` — order-level delivery KPI logic.
-5. `sql/02_seller_category_region_risk.sql` — seller/category/geography risk segmentation.
-6. `sql/03_inventory_proxy_metrics.sql` — demand velocity proxy logic with limitations.
-7. `notebooks/01_olist_delivery_risk_foundation.py` — runnable pandas foundation script.
+1. [Live Static Dashboard](https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/) — interactive GitHub Pages view of aggregate delivery SLA findings.
+2. `artifacts/kpi-tree.md` — KPI definitions, business interpretation, and action paths.
+3. `artifacts/assumptions.md` — data limitations and inventory proxy rules.
+4. `sql/00_schema_overview.sql` — source table map and join logic.
+5. `sql/01_delivery_sla_metrics.sql` — order-level delivery KPI logic.
+6. `sql/02_seller_category_region_risk.sql` — seller/category/geography risk segmentation.
+7. `sql/03_inventory_proxy_metrics.sql` — demand velocity proxy logic with limitations.
+8. `notebooks/01_olist_delivery_risk_foundation.py` — runnable pandas foundation script.
 
 ## 📦 Data Setup
 
