@@ -30,6 +30,8 @@ What matters:
 ## 🔗 Findings Artifacts
 
 - [Live Static Dashboard](https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/)
+
+[![Olist Delivery SLA Risk Dashboard preview](assets/dashboard-preview.png)](https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/)
 - [Delivery SLA Summary](case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md)
 - [Seller / Category / Region Risk Prioritization](case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md)
 - [Review Impact Summary](case-studies/inventory-stockout-overstock-analysis/artifacts/review-impact-summary.md)
