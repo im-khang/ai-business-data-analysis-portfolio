@@ -83,6 +83,41 @@
         </div>
         <div id="risk-segments" class="chart"></div>
         <p class="so-what"><strong>So what?</strong> Ranks where an operations team should investigate first; it does not prove seller fault, inventory shortage, or carrier root cause.</p>
+        <aside class="triage-rationale" aria-label="Triage rationale for investigation candidates">
+          <div class="triage-intro">
+            <p class="section-kicker">Triage rationale</p>
+            <h3>Why these candidates appear</h3>
+            <p>Candidates surface when a seller-state, customer-state, and category combination has meaningful late-order volume plus late-rate context. Use this queue to decide where to investigate first, not to assign fault.</p>
+          </div>
+          <div class="triage-grid">
+            <section class="triage-card">
+              <h4>Operations checks</h4>
+              <ul>
+                <li>Review delivery promise accuracy for highlighted lanes and categories.</li>
+                <li>Check seller fulfillment handoffs before changing operations policy.</li>
+                <li>Compare carrier lane or route patterns against missed SLA promises.</li>
+                <li>Validate with company-owned inventory snapshots before production stock decisions.</li>
+              </ul>
+            </section>
+            <section class="triage-card">
+              <h4>Evidence limits</h4>
+              <ul>
+                <li>Aggregate public data only.</li>
+                <li>Association, not causality.</li>
+                <li>Candidate queue, not blame list.</li>
+                <li>Proxy signal, not direct inventory proof.</li>
+              </ul>
+            </section>
+            <section class="triage-card proof-trail">
+              <h4>Proof trail</h4>
+              <div class="proof-links" aria-label="Candidate proof trail links">
+                <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Case study context</a>
+                <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA sizing evidence</a>
+                <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md">Candidate ranking artifact</a>
+              </div>
+            </section>
+          </div>
+        </aside>
       </article>
     </section>
 
