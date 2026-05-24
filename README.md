@@ -80,7 +80,6 @@ docs/
     assets/
 assets/
   dashboard-preview.png
-ai-workflow-log/
 ```
 
 ## Data Honesty

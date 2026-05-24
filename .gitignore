@@ -21,3 +21,5 @@ case-studies/inventory-stockout-overstock-analysis/data/processed/*
 !case-studies/inventory-stockout-overstock-analysis/data/processed/.gitkeep
 case-studies/inventory-stockout-overstock-analysis/notebooks/.ipynb_checkpoints/
 **/.ipynb_checkpoints/
+
+ai-workflow-log/
