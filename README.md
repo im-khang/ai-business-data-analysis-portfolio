@@ -1,59 +1,63 @@
 # Supply Chain Analytics Portfolio
 
-Data Analytics portfolio focused on supply chain operations: delivery performance, demand signals, inventory planning, warehouse flow, outbound logistics, and decision-ready operational reporting.
+<p align="center">
+  <strong>Data Analytics portfolio for supply chain operations</strong><br>
+  Delivery performance · demand signals · inventory planning · warehouse flow · outbound logistics · control tower reporting
+</p>
 
-This repo is built as a multi-case-study portfolio. The first featured case uses public Olist ecommerce data to show how SQL, Python, KPI design, dashboarding, and evidence-based communication can turn messy operational data into practical supply chain analytics insight.
+<p align="center">
+  <a href="https://im-khang.github.io/ai-business-data-analysis-portfolio/">Portfolio Homepage</a> ·
+  <a href="https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/">Live Olist Dashboard</a> ·
+  <a href="case-studies/inventory-stockout-overstock-analysis/README.md">Featured Case Study</a> ·
+  <a href="case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA Evidence</a>
+</p>
 
-## Featured Case Study: Olist Delivery SLA Risk
+<p align="center">
+  <strong>SQL analysis</strong> ·
+  <strong>Python data prep</strong> ·
+  <strong>GitHub Pages dashboard</strong> ·
+  <strong>Supply chain operations analytics</strong> ·
+  <strong>Evidence-bounded claims</strong>
+</p>
 
-**Business question:** which delivery SLA risks deserve operations attention first?
+## Featured Work: Olist Delivery SLA Risk
 
-**Analytics focus:** delivery promise performance, delay severity, customer review association, and seller/category/region investigation candidates.
-
-**Portfolio signal:** this case demonstrates data analysis workflow, metric definition, multi-table ecommerce data modeling, operational triage, static dashboard communication, and clear limits on what public data can prove.
+| Case | Decision question | Portfolio proof | Links |
+|---|---|---|---|
+| **Olist Delivery SLA Risk** | Which delivery SLA risks deserve operations attention first? | Multi-table ecommerce analysis, KPI design, delay-severity triage, review-score association, seller/category/region investigation queue, and caveat-controlled recommendation writing. | [Live dashboard](https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/) · [Case study](case-studies/inventory-stockout-overstock-analysis/README.md) · [SLA summary](case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md) · [Candidate ranking](case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md) |
 
 [![Olist Delivery SLA Risk Dashboard preview](assets/dashboard-preview.png)](https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/)
 
-- [Live Static Dashboard](https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/)
-- [Delivery SLA Summary](case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md)
-- [Seller / Category / Region Investigation Candidates](case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md)
-- [Review Impact Association Summary](case-studies/inventory-stockout-overstock-analysis/artifacts/review-impact-summary.md)
-- [Full Olist Case Study Folder](case-studies/inventory-stockout-overstock-analysis/README.md)
+### KPI Snapshot
 
-### Verified Olist Snapshot
+| Delivered orders analyzed | Late delivered orders | Late delivery rate | Avg delivery days | Avg days late among late orders |
+|---:|---:|---:|---:|---:|
+| 96,470 | 6,534 | 6.77% | 12.09 | 10.62 |
 
-| Metric | Result |
-|---|---:|
-| Delivered orders analyzed | 96,470 |
-| Late delivered orders | 6,534 |
-| Late delivery rate | 6.77% |
-| Average delivery days | 12.09 |
-| Average days late among late orders | 10.62 |
-
-### How to Read the Olist Case
+### Why this case matters
 
 - **Delivery SLA risk:** late-order volume and late rate show where service promise misses are material.
 - **Customer experience signal:** review scores are associated with delivery delay bands; this is association, not proof that delay alone caused each review outcome.
 - **Operations triage:** seller/category/region segments are investigation candidates, not blame assignments or root-cause proof.
-- **Inventory honesty:** Olist does not include direct stock-on-hand, replenishment, warehouse availability, backorder, stockout, or overstock fields. Inventory wording in this case means fulfillment-planning proxy signal only.
+- **Decision discipline:** recommendations stay tied to available evidence and call for internal inventory, fulfillment, and carrier data before production policy changes.
 
-## Supply Chain Analytics Roadmap
+## Portfolio Roadmap
 
-Planned future case-study directions:
-
-- **Demand forecasting:** forecast demand patterns, quantify forecast error, and translate forecast accuracy into planning decisions.
-- **Inventory management:** analyze reorder risk, service-level tradeoffs, stock coverage, aging inventory, and replenishment scenarios using datasets with real inventory fields.
-- **Warehouse inbound logistics optimization:** examine inbound shipment flow, receiving bottlenecks, dock scheduling, supplier variability, and putaway readiness.
-- **Outbound logistics:** analyze carrier performance, route/service levels, delivery cost drivers, last-mile risk, and fulfillment handoff performance.
-- **Broader supply chain analytics:** connect procurement, fulfillment, logistics, customer experience, and operational KPIs into decision-ready dashboards and recommendations.
+| Pillar | Future case-study direction | Decision value |
+|---|---|---|
+| **Demand forecasting** | Forecast demand patterns, quantify forecast error, and translate accuracy into planning decisions. | Improve planning confidence and exception handling. |
+| **Inventory management** | Analyze reorder risk, service-level tradeoffs, stock coverage, aging inventory, and replenishment scenarios using datasets with real inventory fields. | Balance availability, working capital, and risk. |
+| **Warehouse inbound logistics optimization** | Examine inbound shipment flow, receiving bottlenecks, dock scheduling, supplier variability, and putaway readiness. | Reduce receiving friction and improve readiness. |
+| **Outbound logistics** | Analyze carrier performance, route/service levels, delivery cost drivers, last-mile risk, and fulfillment handoff performance. | Prioritize lanes, partners, and service levels. |
+| **Control tower / broader supply chain analytics** | Connect procurement, fulfillment, logistics, customer experience, and operational KPIs into decision-ready dashboards. | Turn fragmented signals into operating decisions. |
 
 ## Skills Demonstrated
 
-- SQL and Python data analysis on multi-table operational datasets.
+- SQL and Python analysis on multi-table operational datasets.
 - KPI design for service levels, delay severity, customer impact signals, and triage queues.
 - Data quality checks, reproducible analysis artifacts, and GitHub-ready documentation.
 - Static dashboard storytelling for recruiters, hiring managers, and operations stakeholders.
-- Clear distinction between evidence, proxy signals, association, and unsupported causal claims.
+- Clear separation between evidence, proxy signals, association, and unsupported causal claims.
 
 ## Repository Structure
 
@@ -75,6 +79,8 @@ case-studies/
     data/
     dashboard/
 docs/
+  index.html
+  assets/css/site.css
   inventory-stockout-overstock-analysis/
     index.html
     assets/
