@@ -1,5 +1,12 @@
 /* global Plotly */
 const DATA_PATH = 'assets/data/';
+const CHART_THEME = {
+  paper_bgcolor: '#ffffff',
+  plot_bgcolor: '#f8fafc',
+  font: { color: '#1d1d1f', family: '-apple-system, BlinkMacSystemFont, \"SF Pro Text\", Inter, system-ui, sans-serif' },
+  hoverlabel: { bgcolor: '#111827', font: { color: '#ffffff' } }
+};
+
 let queueData = [];
 
 function escapeHTML(value) {
@@ -20,6 +27,12 @@ async function loadJSON(name) {
     throw new Error(`Failed to load ${name}: ${resp.status}`);
   }
   return resp.json();
+}
+
+function ensurePlotly() {
+  if (!window.Plotly) {
+    throw new Error('Plotly library failed to load; check CDN access before reviewing dashboard charts.');
+  }
 }
 
 function showEmptyState(msg) {
@@ -80,7 +93,7 @@ function renderForecastAccuracy(accuracy) {
   const layout = { title: 'Forecast Score vs WAPE % by Product Family',
     xaxis: { title: 'WAPE %' }, yaxis: { title: 'Forecast Score' },
     showlegend: true, legend: { orientation: 'h' },
-    paper_bgcolor: '#fff', plot_bgcolor: '#fafbfc' };
+    ...CHART_THEME };
   const config = { responsive: true, displayModeBar: false };
   Plotly.newPlot(el, traces, layout, config);
 }
@@ -125,9 +138,9 @@ function renderSegments(segments) {
   const rows = segments.rows;
   const x = rows.map(r => `${r.abc_class}-${r.xyz_class}`);
   const y = rows.map(r => r.items || 0);
-  Plotly.newPlot(el, [{ x, y, type: 'bar', marker: { color: '#1a73e8' } }],
+  Plotly.newPlot(el, [{ x, y, type: 'bar', marker: { color: '#0071e3' } }],
     { title: 'Items per ABC-XYZ Segment', xaxis: { title: 'Segment' }, yaxis: { title: 'Item Count' },
-      paper_bgcolor: '#fff', plot_bgcolor: '#fafbfc' }, { responsive: true, displayModeBar: false });
+      ...CHART_THEME }, { responsive: true, displayModeBar: false });
 }
 
 function renderAssumptions(assumptions) {
@@ -158,6 +171,7 @@ function renderMetadata(metadata) {
 async function init() {
   let hasData = false;
   try {
+    ensurePlotly();
     const [kpis, accuracy, queue, segments, assumptions, metadata] = await Promise.all([
       loadJSON('kpis.json'),
       loadJSON('forecast_accuracy.json'),

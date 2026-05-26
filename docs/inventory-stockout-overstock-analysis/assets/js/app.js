@@ -1,4 +1,10 @@
 const DATA_PATH = './assets/data/';
+const chartTheme = {
+  paper_bgcolor: "#ffffff",
+  plot_bgcolor: "#f8fafc",
+  font: { color: "#1d1d1f", family: "-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif" },
+  hoverlabel: { bgcolor: "#111827", font: { color: "#ffffff" } }
+};
 const chartConfig = {responsive: true, displaylogo: false};
 
 async function loadJson(name) {
@@ -22,7 +28,7 @@ function renderCards(kpis) {
 }
 
 function layout(title, extra = {}) {
-  return {title, paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)', font: {color: '#e5e7eb'}, margin: {t: 48, r: 24, b: 90, l: 60}, ...extra};
+  return {title, ...chartTheme, margin: {t: 48, r: 24, b: 90, l: 60}, ...extra};
 }
 
 function ensurePlotly() {

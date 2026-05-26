@@ -6,5 +6,5 @@
   "avg_bias_pct": 0.76,
   "avg_forecast_score": 35.15,
   "top_exception_score": 96.66,
-  "planning_caveat": "Planning assumption — not production-order recommendation."
+  "planning_caveat": "Planning assumption — not production replenishment instruction."
 }
