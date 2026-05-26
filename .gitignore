@@ -23,3 +23,11 @@ case-studies/inventory-stockout-overstock-analysis/notebooks/.ipynb_checkpoints/
 **/.ipynb_checkpoints/
 
 ai-workflow-log/
+
+# Demand forecasting & replenishment case (Favorita)
+case-studies/demand-forecasting-replenishment/data/raw/**
+!case-studies/demand-forecasting-replenishment/data/raw/.gitkeep
+case-studies/demand-forecasting-replenishment/data/interim/**
+!case-studies/demand-forecasting-replenishment/data/interim/.gitkeep
+case-studies/demand-forecasting-replenishment/data/processed/**
+!case-studies/demand-forecasting-replenishment/data/processed/.gitkeep

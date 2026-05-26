@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demand Forecasting & Replenishment Planner Queue</title>
+  <meta name="description" content="Static Favorita demand forecast and replenishment planning dashboard with Planner Exception Queue, ABC/XYZ segmentation, and assumption-based inventory caveats.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="top-nav" aria-label="Dashboard navigation">
+    <a href="../">Portfolio</a>
+    <a href="#overview">Overview</a>
+    <a href="#forecast-accuracy">Forecast Accuracy</a>
+    <a href="#planner-queue">Planner Queue</a>
+    <a href="#assumptions">Assumptions</a>
+    <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/tree/master/case-studies/demand-forecasting-replenishment">Case study</a>
+  </nav>
+
+  <header class="hero" id="overview">
+    <p class="eyebrow">Demand planning · Forecast quality · Replenishment review</p>
+    <h1>Planner Exception Queue for Favorita demand forecasting.</h1>
+    <p class="lead">This dashboard turns baseline demand forecasts into planner review candidates using WAPE, MAE, Bias %, Forecast Score, FVA, ABC/XYZ segmentation, and assumption-based safety stock / reorder point logic.</p>
+    <div class="kpi-grid" id="kpi-container" aria-label="Forecast and queue KPI cards">
+      <article class="kpi-card"><strong>Pending</strong><span>Items in planner queue</span></article>
+      <article class="kpi-card"><strong>Pending</strong><span>Avg WAPE %</span></article>
+      <article class="kpi-card"><strong>Pending</strong><span>Avg Bias %</span></article>
+      <article class="kpi-card"><strong>Pending</strong><span>Avg Forecast Score</span></article>
+    </div>
+    <p class="caveat" id="kpi-caveat">Planning assumption — not production-order recommendation. Raw Favorita data stays local; dashboard uses aggregate JSON only.</p>
+  </header>
+
+  <main id="main">
+    <section class="section" id="forecast-accuracy">
+      <h2>Forecast Accuracy</h2>
+      <p>Baseline-first view: naïve forecast anchors FVA, moving average is candidate baseline. WAPE and Bias % appear together because under-forecast and over-forecast create different planning risks.</p>
+      <div class="chart-panel" id="accuracy-chart" role="img" aria-label="Forecast score versus WAPE chart"></div>
+      <p class="caveat">MAPE is not primary because zero or low demand can distort interpretation. Zero-demand WAPE returns null and is documented in build metadata.</p>
+    </section>
+
+    <section class="section" id="planner-queue">
+      <h2>Planner Queue</h2>
+      <p>Primary output: ranked item/store/family combinations needing replenishment review. Reason codes come from measurable signals: volume, forecast error, bias, variability, or replenishment assumption.</p>
+      <div class="chart-panel">
+        <table class="queue-table" id="queue-table">
+          <thead>
+            <tr>
+              <th scope="col">Store / item</th>
+              <th scope="col">Family</th>
+              <th scope="col">Score</th>
+              <th scope="col">WAPE (%)</th>
+              <th scope="col">Bias (%)</th>
+              <th scope="col">ABC / XYZ</th>
+              <th scope="col">Reason codes</th>
+              <th scope="col">Recommended action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="caveat">Queue rows are review candidates, not automatic purchase orders or proof of true stockout/overstock.</p>
+    </section>
+
+    <section class="section" id="segments">
+      <h2>ABC/XYZ Segments</h2>
+      <p>ABC represents business importance from demand volume. XYZ represents demand variability. Together they guide planner attention before any replenishment decision.</p>
+      <div class="chart-panel" id="segments-chart" role="img" aria-label="ABC XYZ segment count chart"></div>
+    </section>
+
+    <section class="section" id="assumptions">
+      <h2>Assumptions</h2>
+      <p>Safety stock and reorder point outputs are transparent assumptions. Favorita public data does not include true stock position, open purchase orders, or supplier lead-time history.</p>
+      <div class="chart-panel">
+        <table>
+          <tbody id="assumptions-content">
+            <tr><td><strong>Status</strong></td><td>Waiting for aggregate JSON export.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Build metadata</h3>
+      <div class="chart-panel">
+        <table>
+          <tbody id="metadata-content">
+            <tr><td><strong>Status</strong></td><td>Waiting for build metadata.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="caveat">Public dashboard is static HTML/CSS/JavaScript/Plotly plus aggregate JSON only. No backend, login, API, database, scheduler, or live refresh.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Favorita demand forecasting & replenishment case study. Aggregate dashboard data only; raw data local-only and git-ignored.</p>
+  </footer>
+</body>
+</html>
