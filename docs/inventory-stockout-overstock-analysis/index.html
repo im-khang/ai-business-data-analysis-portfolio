@@ -9,11 +9,20 @@
 </head>
 <body>
   <header class="hero" id="top">
-    <p class="eyebrow">AI-assisted BA/DA portfolio · ecommerce operations</p>
+    <nav class="site-nav" aria-label="Dashboard navigation">
+      <a href="../">Portfolio</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#decision-logic">Decision Logic</a>
+      <a href="#investigation-candidates">Investigation Candidates</a>
+      <a href="#method-notes">Caveats</a>
+      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Case study</a>
+      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA summary</a>
+    </nav>
     <div class="hero-grid">
-      <div>
-        <h1>Which delivery SLA risks deserve operations attention first?</h1>
-        <p class="lede">Hiring-manager decision view for the Olist case study: size late-delivery exposure, connect it to customer review impact, isolate seller/category/region investigation candidates, then choose practical next actions.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Ecommerce operations · Delivery SLA risk</p>
+        <h1>Which delivery misses deserve attention first?</h1>
+        <p class="lede">Premium decision view for the Olist case study: size late-delivery exposure, connect delay bands to review-score association, isolate seller/category/region investigation candidates, then choose practical next checks.</p>
         <div class="chip-row" aria-label="Evidence caveats">
           <span class="chip">Aggregate-only public data</span>
           <span class="chip">Association, not causality</span>
@@ -21,8 +30,9 @@
           <span class="chip">Investigation candidates, not blame list</span>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Decision story">
-        <h2>Decision story</h2>
+      <aside class="hero-card glass" aria-label="Decision story">
+        <span class="section-kicker">Decision story</span>
+        <h2>From SLA signal to controlled action.</h2>
         <ol>
           <li><strong>SLA risk:</strong> identify late delivery exposure.</li>
           <li><strong>Customer impact:</strong> compare review-score association by delay band.</li>
@@ -32,15 +42,6 @@
       </aside>
     </div>
     <p class="limitation">Data honesty: Olist does not include direct inventory, replenishment, warehouse availability, or backorder fields. Inventory wording here means proxy investigation signal only.</p>
-    <nav class="site-nav" aria-label="Dashboard navigation">
-      <a href="#evidence">Evidence</a>
-      <a href="#decision-logic">Decision Logic</a>
-      <a href="#investigation-candidates">Investigation Candidates</a>
-      <a href="#method-notes">Caveats</a>
-      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/README.md">Portfolio README</a>
-      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Case study</a>
-      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA summary</a>
-    </nav>
   </header>
 
   <main>

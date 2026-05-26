@@ -4,36 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Supply Chain Analytics Portfolio</title>
-  <meta name="description" content="Data Analytics portfolio for supply chain operations: delivery performance, inventory planning, warehouse flow, outbound logistics, and control tower reporting.">
+  <meta name="description" content="Data Analytics portfolio for supply chain operations: delivery performance, demand forecasting, inventory planning, replenishment review, and control tower reporting.">
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
   <header class="hero">
     <nav class="top-nav" aria-label="Portfolio navigation">
       <a href="./">Portfolio</a>
-      <a href="inventory-stockout-overstock-analysis/">Live dashboard</a>
-      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Case study</a>
+      <a href="inventory-stockout-overstock-analysis/">Olist SLA case</a>
+      <a href="demand-forecasting-replenishment/">Favorita forecast case</a>
       <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio">Repository</a>
     </nav>
     <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Data Analytics · Supply Chain Operations</p>
-        <h1>Supply chain analytics portfolio built for decision-ready operations reporting.</h1>
-        <p class="lead">The featured case study turns delivery operations data into KPI framing, evidence-bounded triage, and practical next actions. The roadmap extends this portfolio toward demand signals, inventory planning, warehouse flow, outbound logistics, and control tower reporting.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Supply Chain Analytics · Decision-ready portfolio</p>
+        <h1>Analytics work shaped like a product story.</h1>
+        <p class="lead">Static case studies that turn public operations data into executive-ready questions, caveat-safe metrics, planner queues, and practical next actions for ecommerce, logistics, and replenishment teams.</p>
         <div class="actions">
-          <a class="button primary" href="inventory-stockout-overstock-analysis/">Open featured dashboard</a>
-          <a class="button" href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/README.md">Read repository README</a>
+          <a class="button primary" href="demand-forecasting-replenishment/">View demand planning case</a>
+          <a class="button" href="inventory-stockout-overstock-analysis/">View delivery SLA case</a>
         </div>
       </div>
-      <aside class="proof-card" aria-label="Featured proof card">
-        <span class="label">Featured case</span>
-        <h2>Olist Delivery SLA Risk</h2>
-        <p>Size late-delivery exposure, connect delay bands to review-score association, rank seller/category/region investigation candidates, and define next operational checks without overclaiming public data.</p>
-        <ul>
-          <li>96,470 delivered orders analyzed</li>
-          <li>6.77% late delivery rate</li>
-          <li>10.62 average days late among late orders</li>
-        </ul>
+      <aside class="proof-card glass" aria-label="Portfolio proof card">
+        <span class="label">Featured proof</span>
+        <h2>Two public dashboards. One hiring signal.</h2>
+        <p>Forecast quality, replenishment assumptions, delivery SLA exposure, review association, and investigation-candidate triage — all presented with transparent evidence limits.</p>
+        <div class="proof-metrics">
+          <span><strong>19,210</strong> planner rows generated locally</span>
+          <span><strong>96,470</strong> delivered Olist orders analyzed</span>
+          <span><strong>Static</strong> GitHub Pages + aggregate JSON only</span>
+        </div>
       </aside>
     </div>
   </header>
@@ -41,49 +41,58 @@
   <main>
     <section class="section badges" aria-label="Portfolio focus badges">
       <span>SQL analysis</span>
-      <span>Python data prep</span>
-      <span>KPI design</span>
-      <span>Static dashboards</span>
-      <span>Evidence-bounded recommendations</span>
+      <span>Python pipelines</span>
+      <span>Forecast metrics</span>
+      <span>Planner queues</span>
+      <span>Caveat-safe decisions</span>
     </section>
 
-    <section class="section feature" id="featured-work">
-      <div>
-        <p class="eyebrow">Featured work</p>
-        <h2>Olist Delivery SLA Risk Dashboard</h2>
-        <p>Hiring-manager decision view for ecommerce operations: identify SLA exposure, compare customer review signals, prioritize investigation candidates, then choose controlled next actions.</p>
-      </div>
-      <div class="link-grid">
-        <a href="inventory-stockout-overstock-analysis/">Live dashboard</a>
-        <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Case study</a>
-        <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA summary</a>
-        <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md">Candidate ranking</a>
-      </div>
+    <section class="section case-grid" id="featured-work" aria-label="Featured case studies">
+      <article class="case-card hero-case">
+        <p class="eyebrow">Demand planning case</p>
+        <h2>Favorita Planner Exception Queue</h2>
+        <p>Baseline forecasts become planner-review candidates using WAPE, MAE, Bias %, Forecast Score, FVA, ABC/XYZ segmentation, and assumption-based safety stock / reorder point logic.</p>
+        <div class="link-row">
+          <a href="demand-forecasting-replenishment/">Open dashboard</a>
+          <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/tree/master/case-studies/demand-forecasting-replenishment">Read case study</a>
+          <a href="demand-forecasting-replenishment/assets/data/build_metadata.json">Build metadata</a>
+        </div>
+      </article>
+      <article class="case-card">
+        <p class="eyebrow">Delivery operations case</p>
+        <h2>Olist Delivery SLA Risk</h2>
+        <p>Late-delivery exposure, review-score association, and seller/category/region investigation candidates framed for practical operations triage.</p>
+        <div class="link-row">
+          <a href="inventory-stockout-overstock-analysis/">Open dashboard</a>
+          <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Read case study</a>
+          <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA summary</a>
+          <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md">Candidate ranking</a>
+        </div>
+      </article>
     </section>
 
-    <section class="section kpis" aria-label="Olist KPI snapshot">
-      <article><strong>96,470</strong><span>delivered orders</span></article>
-      <article><strong>6,534</strong><span>late delivered orders</span></article>
-      <article><strong>6.77%</strong><span>late delivery rate</span></article>
-      <article><strong>12.09</strong><span>avg delivery days</span></article>
-      <article><strong>10.62</strong><span>avg days late</span></article>
+    <section class="section kpis" aria-label="Portfolio KPI snapshot">
+      <article><strong>WAPE</strong><span>forecast-error framing</span></article>
+      <article><strong>Bias %</strong><span>under/over forecast signal</span></article>
+      <article><strong>ABC/XYZ</strong><span>planner prioritization</span></article>
+      <article><strong>6.77%</strong><span>Olist late delivery rate</span></article>
+      <article><strong>Aggregate</strong><span>public-safe data output</span></article>
     </section>
 
     <section class="section pillars" id="roadmap">
       <p class="eyebrow">Portfolio roadmap</p>
-      <h2>Supply chain domains planned next</h2>
+      <h2>Next supply-chain analytics surfaces</h2>
       <div class="pillar-grid">
         <article><h3>Demand forecasting</h3><p>Forecast demand patterns, quantify forecast error, and translate accuracy into planning decisions.</p></article>
         <article><h3>Inventory management</h3><p>Analyze reorder risk, service-level tradeoffs, stock coverage, aging inventory, and replenishment scenarios with real inventory fields.</p></article>
-        <article><h3>Warehouse inbound logistics optimization</h3><p>Review inbound flow, receiving bottlenecks, dock scheduling, supplier variability, and putaway readiness.</p></article>
-        <article><h3>Outbound logistics</h3><p>Compare carrier performance, route/service levels, delivery cost drivers, last-mile risk, and fulfillment handoffs.</p></article>
-        <article><h3>Control tower / broader supply chain analytics</h3><p>Connect procurement, fulfillment, logistics, customer experience, and operational KPIs into decision-ready dashboards.</p></article>
+        <article><h3>Warehouse inbound logistics</h3><p>Review receiving bottlenecks, dock scheduling, supplier variability, and putaway readiness.</p></article>
+        <article><h3>Outbound logistics</h3><p>Compare carrier performance, service levels, delivery cost drivers, last-mile risk, and fulfillment handoffs.</p></article>
       </div>
     </section>
 
     <section class="section caveat">
       <h2>Evidence boundaries</h2>
-      <p>Olist public data does not include direct stock-on-hand, replenishment, warehouse availability, backorder, stockout, or overstock fields. Olist delivery-delay and segment patterns are used as fulfillment-planning investigation signals only, not proof of direct inventory levels, accountability, or single-cause customer review impact.</p>
+      <p>Public dashboards use aggregate JSON only. Olist public data does not include direct stock-on-hand, replenishment, warehouse availability, backorder, stockout, or overstock fields. Favorita public dashboard uses planning assumptions, not production-order recommendations. Results are decision-support artifacts, not unsupported causality or accountability claims.</p>
     </section>
   </main>
 </body>

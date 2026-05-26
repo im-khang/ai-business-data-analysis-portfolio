@@ -55,9 +55,19 @@ function renderKPIs(kpis) {
   if (caveat && kpis.planning_caveat) caveat.textContent = kpis.planning_caveat;
 }
 
+function renderChartEmptyState(el, msg) {
+  if (!el) return;
+  el.removeAttribute('role');
+  el.removeAttribute('aria-label');
+  el.innerHTML = `<div class="empty-state" role="status">${escapeHTML(msg)}</div>`;
+}
+
 function renderForecastAccuracy(accuracy) {
   const el = document.getElementById('accuracy-chart');
-  if (!accuracy || !accuracy.rows || !accuracy.rows.length) return;
+  if (!accuracy || !accuracy.rows || !accuracy.rows.length) {
+    renderChartEmptyState(el, 'Forecast accuracy data is not published yet.');
+    return;
+  }
   const rows = accuracy.rows;
   const families = [...new Set(rows.map(r => r.family))].slice(0, 8);
   const traces = families.map(fam => {
@@ -76,12 +86,14 @@ function renderForecastAccuracy(accuracy) {
 }
 
 function renderPlannerQueue(queue) {
+  const tbody = document.querySelector('#queue-table tbody');
   if (!queue || !queue.rows || !queue.rows.length) {
-    document.getElementById('queue-table').innerHTML = '<div class="empty-state">No planner exceptions generated. Run the pipeline with real demand data.</div>';
+    if (tbody) {
+      tbody.innerHTML = '<tr><td colspan="8"><div class="empty-state" role="status">No planner exceptions generated. Run the pipeline with real demand data.</div></td></tr>';
+    }
     return;
   }
   queueData = queue.rows;
-  const tbody = document.querySelector('#queue-table tbody');
   tbody.innerHTML = '';
   const reasonClass = (rc) => {
     if (rc.includes('risk') || rc.includes('error')) return 'risk';
@@ -106,7 +118,10 @@ function renderPlannerQueue(queue) {
 
 function renderSegments(segments) {
   const el = document.getElementById('segments-chart');
-  if (!segments || !segments.rows || !segments.rows.length) return;
+  if (!segments || !segments.rows || !segments.rows.length) {
+    renderChartEmptyState(el, 'ABC/XYZ segment data is not published yet.');
+    return;
+  }
   const rows = segments.rows;
   const x = rows.map(r => `${r.abc_class}-${r.xyz_class}`);
   const y = rows.map(r => r.items || 0);
