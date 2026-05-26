@@ -1,0 +1,67 @@
+{
+  "rows": [
+    {
+      "abc_class": "A",
+      "xyz_class": "X",
+      "items": 4009,
+      "avg_wape_pct": 32.96,
+      "avg_exception_score": 41.29
+    },
+    {
+      "abc_class": "A",
+      "xyz_class": "Y",
+      "items": 2571,
+      "avg_wape_pct": 53.0,
+      "avg_exception_score": 58.28
+    },
+    {
+      "abc_class": "A",
+      "xyz_class": "Z",
+      "items": 361,
+      "avg_wape_pct": 95.3,
+      "avg_exception_score": 80.69
+    },
+    {
+      "abc_class": "B",
+      "xyz_class": "X",
+      "items": 1146,
+      "avg_wape_pct": 38.47,
+      "avg_exception_score": 35.12
+    },
+    {
+      "abc_class": "B",
+      "xyz_class": "Y",
+      "items": 4154,
+      "avg_wape_pct": 56.87,
+      "avg_exception_score": 48.69
+    },
+    {
+      "abc_class": "B",
+      "xyz_class": "Z",
+      "items": 471,
+      "avg_wape_pct": 91.81,
+      "avg_exception_score": 66.16
+    },
+    {
+      "abc_class": "C",
+      "xyz_class": "X",
+      "items": 121,
+      "avg_wape_pct": 57.07,
+      "avg_exception_score": 29.94
+    },
+    {
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "items": 3063,
+      "avg_wape_pct": 70.09,
+      "avg_exception_score": 47.27
+    },
+    {
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "items": 3314,
+      "avg_wape_pct": 121.59,
+      "avg_exception_score": 58.53
+    }
+  ]
+}

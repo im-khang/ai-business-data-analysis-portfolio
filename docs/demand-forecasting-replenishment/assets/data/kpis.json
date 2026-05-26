@@ -1,0 +1,10 @@
+{
+  "dataset": "Corporación Favorita Grocery Sales Forecasting",
+  "grain": "store_nbr + item_nbr + family over holdout window",
+  "items_in_queue": 19210,
+  "avg_wape_pct": 65.12,
+  "avg_bias_pct": 0.76,
+  "avg_forecast_score": 35.15,
+  "top_exception_score": 96.66,
+  "planning_caveat": "Planning assumption — not production-order recommendation."
+}

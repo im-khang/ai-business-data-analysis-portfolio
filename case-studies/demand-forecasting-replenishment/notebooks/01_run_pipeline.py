@@ -46,15 +46,36 @@ def _read_csv_required(path: Path, columns: list[str], parse_dates: list[str] | 
 
 def load_demand() -> pd.DataFrame:
     usecols = ["date", "store_nbr", "item_nbr", "unit_sales"]
-    train = _read_csv_required(RAW_DIR / "train.csv", usecols, parse_dates=["date"])
     items = _read_csv_required(RAW_DIR / "items.csv", ["item_nbr", "family"])
     _read_csv_required(RAW_DIR / "stores.csv", ["store_nbr"])
-    if train.empty:
+
+    recent_start = pd.Timestamp("2017-02-01")
+    chunks: list[pd.DataFrame] = []
+    try:
+        reader = pd.read_csv(
+            RAW_DIR / "train.csv",
+            usecols=usecols,
+            parse_dates=["date"],
+            chunksize=1_000_000,
+        )
+        for chunk in reader:
+            chunk = chunk.loc[chunk["date"] >= recent_start]
+            if chunk.empty:
+                continue
+            # Returns are negative in Favorita; this proof slice clips them to zero and documents planning-demand only.
+            chunk["unit_sales"] = chunk["unit_sales"].clip(lower=0)
+            chunks.append(chunk)
+    except ValueError as exc:
+        raise ValueError(f"train.csv missing required columns {usecols}: {exc}") from exc
+
+    if not chunks:
         return pd.DataFrame(columns=["date", "store_nbr", "item_nbr", "family", "actual_units"])
-    # Returns are negative in Favorita; this proof slice clips them to zero and documents planning-demand only.
-    train["unit_sales"] = train["unit_sales"].clip(lower=0)
-    recent_start = train["date"].max() - pd.Timedelta(days=180)
-    recent = train.loc[train["date"] >= recent_start].merge(items, on="item_nbr", how="left")
+
+    recent = pd.concat(chunks, ignore_index=True).merge(items, on="item_nbr", how="left")
+    recent = recent.dropna(subset=["family"])
+    if recent.empty:
+        return pd.DataFrame(columns=["date", "store_nbr", "item_nbr", "family", "actual_units"])
+
     # Controlled proof slice: enough history for planner signals, not full-dataset modeling.
     top_families = recent.groupby("family")["unit_sales"].sum().nlargest(5).index
     top_stores = recent.groupby("store_nbr")["unit_sales"].sum().nlargest(8).index
@@ -70,7 +91,6 @@ def load_demand() -> pd.DataFrame:
     if dupes:
         raise ValueError(f"duplicate demand grain rows after aggregation: {dupes}")
     return demand
-
 
 def add_baselines(demand: pd.DataFrame) -> pd.DataFrame:
     if demand.empty:

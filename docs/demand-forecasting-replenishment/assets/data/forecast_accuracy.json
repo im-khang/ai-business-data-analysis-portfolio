@@ -1,0 +1,504 @@
+{
+  "rows": [
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 5771.43,
+      "mae_units": 5.25,
+      "bias_pct": 5571.43,
+      "forecast_score": 0.0,
+      "fva_pct": -2785.72
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 1895.24,
+      "mae_units": 5.69,
+      "bias_pct": 1714.29,
+      "forecast_score": 0.0,
+      "fva_pct": -1037.12
+    },
+    {
+      "family": "CLEANING",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 1257.14,
+      "mae_units": 6.29,
+      "bias_pct": 1257.14,
+      "forecast_score": 0.0,
+      "fva_pct": -214.29
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 1257.14,
+      "mae_units": 8.38,
+      "bias_pct": 1257.14,
+      "forecast_score": 0.0,
+      "fva_pct": -32.33
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 1000.36,
+      "mae_units": 2.22,
+      "bias_pct": 814.64,
+      "forecast_score": 0.0,
+      "fva_pct": -150.09
+    },
+    {
+      "family": "CLEANING",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 1000.0,
+      "mae_units": 2.5,
+      "bias_pct": 1000.0,
+      "forecast_score": 0.0,
+      "fva_pct": -233.33
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 1000.0,
+      "mae_units": 0.71,
+      "bias_pct": 800.0,
+      "forecast_score": 0.0,
+      "fva_pct": -900.0
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 914.29,
+      "mae_units": 0.57,
+      "bias_pct": 714.29,
+      "forecast_score": 0.0,
+      "fva_pct": -814.29
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 914.29,
+      "mae_units": 1.83,
+      "bias_pct": 857.14,
+      "forecast_score": 0.0,
+      "fva_pct": -814.29
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 720.0,
+      "mae_units": 2.25,
+      "bias_pct": 680.0,
+      "forecast_score": 0.0,
+      "fva_pct": -500.0
+    },
+    {
+      "family": "CLEANING",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 671.43,
+      "mae_units": 0.27,
+      "bias_pct": 471.43,
+      "forecast_score": 0.0,
+      "fva_pct": -123.81
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 665.0,
+      "mae_units": 1.33,
+      "bias_pct": 585.0,
+      "forecast_score": 0.0,
+      "fva_pct": -66.25
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 650.0,
+      "mae_units": 3.25,
+      "bias_pct": 650.0,
+      "forecast_score": 0.0,
+      "fva_pct": -8.33
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 605.49,
+      "mae_units": 2.81,
+      "bias_pct": 528.57,
+      "forecast_score": 0.0,
+      "fva_pct": -191.54
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 604.08,
+      "mae_units": 6.04,
+      "bias_pct": 494.9,
+      "forecast_score": 0.0,
+      "fva_pct": -383.26
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 600.0,
+      "mae_units": 0.23,
+      "bias_pct": 400.0,
+      "forecast_score": 0.0,
+      "fva_pct": -100.0
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 553.06,
+      "mae_units": 12.9,
+      "bias_pct": 553.06,
+      "forecast_score": 0.0,
+      "fva_pct": -84.35
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 551.43,
+      "mae_units": 2.51,
+      "bias_pct": 477.14,
+      "forecast_score": 0.0,
+      "fva_pct": -244.64
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 525.71,
+      "mae_units": 0.94,
+      "bias_pct": 325.71,
+      "forecast_score": 0.0,
+      "fva_pct": -425.71
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 514.29,
+      "mae_units": 2.57,
+      "bias_pct": 514.29,
+      "forecast_score": 0.0,
+      "fva_pct": -414.29
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 468.94,
+      "mae_units": 3.99,
+      "bias_pct": 434.16,
+      "forecast_score": 0.0,
+      "fva_pct": -176.55
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 442.86,
+      "mae_units": 1.48,
+      "bias_pct": 442.86,
+      "forecast_score": 0.0,
+      "fva_pct": -121.43
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 416.67,
+      "mae_units": 1.04,
+      "bias_pct": 316.67,
+      "forecast_score": 0.0,
+      "fva_pct": -38.89
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "X",
+      "wape_pct": 400.0,
+      "mae_units": 4.0,
+      "bias_pct": 400.0,
+      "forecast_score": 0.0,
+      "fva_pct": 0.0
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 392.86,
+      "mae_units": 15.71,
+      "bias_pct": 392.86,
+      "forecast_score": 0.0,
+      "fva_pct": -185.72
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 392.38,
+      "mae_units": 1.47,
+      "bias_pct": 344.76,
+      "forecast_score": 0.0,
+      "fva_pct": -135.42
+    },
+    {
+      "family": "CLEANING",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 371.43,
+      "mae_units": 0.25,
+      "bias_pct": 171.43,
+      "forecast_score": 0.0,
+      "fva_pct": -271.43
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 369.84,
+      "mae_units": 2.77,
+      "bias_pct": 347.62,
+      "forecast_score": 0.0,
+      "fva_pct": -137.75
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 350.0,
+      "mae_units": 1.17,
+      "bias_pct": 278.57,
+      "forecast_score": 0.0,
+      "fva_pct": -133.33
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 350.0,
+      "mae_units": 2.5,
+      "bias_pct": 188.57,
+      "forecast_score": 0.0,
+      "fva_pct": -32.08
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 338.96,
+      "mae_units": 1.43,
+      "bias_pct": 196.1,
+      "forecast_score": 0.0,
+      "fva_pct": -20.28
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 337.76,
+      "mae_units": 5.91,
+      "bias_pct": 337.76,
+      "forecast_score": 0.0,
+      "fva_pct": -215.25
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 335.71,
+      "mae_units": 13.43,
+      "bias_pct": 335.71,
+      "forecast_score": 0.0,
+      "fva_pct": -136.97
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 330.0,
+      "mae_units": 2.2,
+      "bias_pct": 235.71,
+      "forecast_score": 0.0,
+      "fva_pct": -175.0
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 316.96,
+      "mae_units": 1.41,
+      "bias_pct": 216.96,
+      "forecast_score": 0.0,
+      "fva_pct": -40.87
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "X",
+      "wape_pct": 314.29,
+      "mae_units": 6.29,
+      "bias_pct": 314.29,
+      "forecast_score": 0.0,
+      "fva_pct": -214.29
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 311.9,
+      "mae_units": 3.74,
+      "bias_pct": 311.9,
+      "forecast_score": 0.0,
+      "fva_pct": -274.29
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 311.67,
+      "mae_units": 3.12,
+      "bias_pct": 145.0,
+      "forecast_score": 0.0,
+      "fva_pct": -55.84
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 300.0,
+      "mae_units": 0.22,
+      "bias_pct": 100.0,
+      "forecast_score": 0.0,
+      "fva_pct": -100.0
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 285.71,
+      "mae_units": 0.16,
+      "bias_pct": 85.71,
+      "forecast_score": 0.0,
+      "fva_pct": -185.71
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "A",
+      "xyz_class": "Z",
+      "wape_pct": 279.08,
+      "mae_units": 100.87,
+      "bias_pct": 129.33,
+      "forecast_score": 0.0,
+      "fva_pct": -56.21
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 278.57,
+      "mae_units": 2.79,
+      "bias_pct": 278.57,
+      "forecast_score": 0.0,
+      "fva_pct": 44.29
+    },
+    {
+      "family": "CLEANING",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 276.19,
+      "mae_units": 0.33,
+      "bias_pct": 95.24,
+      "forecast_score": 0.0,
+      "fva_pct": -65.71
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 274.29,
+      "mae_units": 3.43,
+      "bias_pct": 274.29,
+      "forecast_score": 0.0,
+      "fva_pct": -174.29
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 271.43,
+      "mae_units": 0.23,
+      "bias_pct": 71.43,
+      "forecast_score": 0.0,
+      "fva_pct": -171.43
+    },
+    {
+      "family": "CLEANING",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 271.43,
+      "mae_units": 0.1,
+      "bias_pct": 71.43,
+      "forecast_score": 0.0,
+      "fva_pct": -171.43
+    },
+    {
+      "family": "PRODUCE",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 266.95,
+      "mae_units": 1.04,
+      "bias_pct": 83.56,
+      "forecast_score": 0.0,
+      "fva_pct": -52.47
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Y",
+      "wape_pct": 266.67,
+      "mae_units": 1.33,
+      "bias_pct": 266.67,
+      "forecast_score": 0.0,
+      "fva_pct": -33.34
+    },
+    {
+      "family": "BEVERAGES",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 264.29,
+      "mae_units": 0.76,
+      "bias_pct": 107.14,
+      "forecast_score": 0.0,
+      "fva_pct": -428.58
+    },
+    {
+      "family": "GROCERY I",
+      "abc_class": "C",
+      "xyz_class": "Z",
+      "wape_pct": 257.14,
+      "mae_units": 0.23,
+      "bias_pct": 57.14,
+      "forecast_score": 0.0,
+      "fva_pct": -71.43
+    }
+  ]
+}

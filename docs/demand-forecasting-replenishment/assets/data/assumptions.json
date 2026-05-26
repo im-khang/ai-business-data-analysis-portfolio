@@ -1,0 +1,7 @@
+{
+  "lead_time_days": 7,
+  "service_level_assumption": "90% (z=1.28)",
+  "review_policy": "Use queue as review candidates, not automatic order instructions.",
+  "inventory_limit": "Public Favorita data does not include true stock on hand, purchase orders, or supplier lead-time history.",
+  "zero_demand_handling": "WAPE returns null when actual demand denominator is zero."
+}

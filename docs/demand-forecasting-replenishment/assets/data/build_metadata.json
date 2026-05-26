@@ -1,0 +1,20 @@
+{
+  "dataset": "Corporación Favorita Grocery Sales Forecasting",
+  "generated_at_utc": "2026-05-26T09:52:37.825202+00:00",
+  "row_counts": {
+    "planner_metrics": 19210,
+    "planner_queue": 25,
+    "segments": 9
+  },
+  "json_total_bytes": 33905,
+  "json_max_file_bytes": 20258,
+  "json_file_bytes": {
+    "assumptions.json": 377,
+    "build_metadata.json": 568,
+    "forecast_accuracy.json": 11018,
+    "kpis.json": 355,
+    "planner_queue.json": 20258,
+    "segments.json": 1329
+  },
+  "caveat": "Aggregate JSON only. Raw data remains local and ignored by git."
+}
