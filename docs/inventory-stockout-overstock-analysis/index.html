@@ -4,55 +4,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Olist Delivery SLA Risk Dashboard</title>
+  <meta name="description" content="Static Olist delivery SLA risk dashboard with late-delivery exposure, review-score association, candidate triage, and caveat-safe evidence boundaries.">
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+  <script src="./assets/js/app.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="site-nav" aria-label="Dashboard navigation">
+    <a href="../">Portfolio</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#decision-logic">Decision logic</a>
+    <a href="#investigation-candidates">Candidates</a>
+    <a href="#method-notes">Caveats</a>
+    <a href="../demand-forecasting-replenishment/">Favorita case</a>
+    <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md" target="_blank" rel="noopener noreferrer">Case study</a>
+  </nav>
+
   <header class="hero" id="top">
-    <nav class="site-nav" aria-label="Dashboard navigation">
-      <a href="../">Portfolio</a>
-      <a href="#evidence">Evidence</a>
-      <a href="#decision-logic">Decision logic</a>
-      <a href="#investigation-candidates">Candidates</a>
-      <a href="#method-notes">Caveats</a>
-      <a href="../demand-forecasting-replenishment/">Favorita case</a>
-      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md" target="_blank" rel="noopener noreferrer">Case study</a>
-    </nav>
     <div class="hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Ecommerce operations · Delivery SLA risk</p>
         <h1>Which delivery misses deserve attention first?</h1>
-        <p class="lede">Premium decision view for the Olist case study: size late-delivery exposure, connect delay bands to review-score association, isolate seller/category/region investigation candidates, then choose practical next checks.</p>
+        <p class="lede">A decision view for sizing late-delivery exposure, connecting delay bands to review-score association, and isolating seller/category/region investigation candidates.</p>
         <div class="chip-row" aria-label="Evidence caveats">
-          <span class="chip">Aggregate-only public data</span>
-          <span class="chip">Association, not causality</span>
-          <span class="chip">Proxy signal, not inventory proof</span>
-          <span class="chip">Investigation candidates, not blame list</span>
+          <span class="chip">Aggregate-only public data</span><span class="chip">Association, not causality</span><span class="chip">Proxy signal, not inventory proof</span><span class="chip">Candidate queue, not blame list</span>
         </div>
       </div>
-      <aside class="hero-card glass" aria-label="Decision story">
-        <span class="section-kicker">Decision story</span>
+      <aside class="hero-card" aria-label="Decision story">
+        <p class="section-kicker">Decision story</p>
         <h2>From SLA signal to controlled action.</h2>
         <ol>
           <li><strong>SLA risk:</strong> identify late delivery exposure.</li>
           <li><strong>Customer impact:</strong> compare review-score association by delay band.</li>
           <li><strong>Triage:</strong> rank seller/category/region investigation candidates.</li>
-          <li><strong>Act:</strong> audit promises, fulfillment handoffs, carrier routes, and company-owned inventory snapshots before production decisions.</li>
+          <li><strong>Act:</strong> audit promises, handoffs, routes, and internal inventory snapshots before production decisions.</li>
         </ol>
       </aside>
     </div>
     <p class="limitation">Data honesty: Olist does not include direct inventory, replenishment, warehouse availability, or backorder fields. Inventory wording here means proxy investigation signal only.</p>
   </header>
 
-  <main>
-    <section id="evidence" aria-label="Verified delivery SLA metrics"><div class="cards" id="kpi-cards"></div></section>
+  <main id="main">
+    <section class="section" id="evidence" aria-label="Verified delivery SLA metrics">
+      <div class="section-heading"><p class="section-kicker">Verified metrics</p><h2>Delivery SLA evidence.</h2></div>
+      <div class="cards" id="kpi-cards"></div>
+    </section>
 
-    <section id="decision-logic" class="panel decision-panel">
-      <div>
-        <p class="section-kicker">Hiring-manager readout</p>
-        <h2>Decision Logic / Action Priority</h2>
-        <p>This dashboard demonstrates KPI framing, caveat control, stakeholder-aware interpretation, and operations triage without overstating what public Olist data can prove.</p>
-      </div>
+    <section id="decision-logic" class="section">
+      <div class="section-heading"><p class="section-kicker">Hiring-manager readout</p><h2>Decision logic.</h2></div>
+      <p>This dashboard demonstrates KPI framing, caveat control, stakeholder-aware interpretation, and operations triage without overstating what public Olist data can prove.</p>
       <div class="priority-grid" aria-label="Action priority steps">
         <article><span>1</span><h3>Size SLA exposure</h3><p>Start with late-order volume and late rate to judge business materiality.</p></article>
         <article><span>2</span><h3>Check customer pain</h3><p>Use review-score association to decide whether delay severity deserves escalation.</p></article>
@@ -61,79 +62,32 @@
       </div>
     </section>
 
-    <section class="grid dark-chapter" aria-label="Delivery SLA evidence charts">
-      <article class="panel">
-        <h2>Delay bands</h2>
-        <div id="delay-bands" class="chart"></div>
-        <p class="so-what"><strong>So what?</strong> Shows whether late delivery is concentrated in mild misses or severe delays that need escalation.</p>
-      </article>
-      <article class="panel">
-        <h2>Review impact association</h2>
-        <div id="review-impact" class="chart"></div>
-        <p class="so-what"><strong>So what?</strong> Connects SLA misses to customer experience signals while staying clear that reviews are associated with delay bands, not proof of one cause.</p>
-      </article>
-      <article class="panel wide">
-        <h2>Monthly SLA trend</h2>
-        <div id="monthly-trend" class="chart"></div>
-        <p class="so-what"><strong>So what?</strong> Helps separate persistent SLA exposure from period-specific spikes that need deeper operational review.</p>
-      </article>
+    <section class="section grid dark-chapter" aria-label="Delivery SLA evidence charts">
+      <article class="panel"><h2>Delay bands.</h2><div id="delay-bands" class="chart"></div><p class="so-what"><strong>So what?</strong> Shows whether late delivery is concentrated in mild misses or severe delays that need escalation.</p></article>
+      <article class="panel"><h2>Review impact association.</h2><div id="review-impact" class="chart"></div><p class="so-what"><strong>So what?</strong> Connects SLA misses to customer experience signals while staying clear that reviews are associated with delay bands, not proof of one cause.</p></article>
+      <article class="panel wide"><h2>Monthly SLA trend.</h2><div id="monthly-trend" class="chart"></div><p class="so-what"><strong>So what?</strong> Helps separate persistent SLA exposure from period-specific spikes that need deeper operational review.</p></article>
       <article id="investigation-candidates" class="panel wide">
-        <div class="panel-title-row">
-          <h2>Seller / category / region investigation candidates</h2>
-          <span class="chip small">Candidate queue</span>
-        </div>
+        <div class="panel-title-row"><h2>Seller / category / region investigation candidates.</h2><span class="chip small">Candidate queue</span></div>
         <div id="risk-segments" class="chart"></div>
         <p class="so-what"><strong>So what?</strong> Ranks where an operations team should investigate first; it does not prove seller accountability, inventory shortage, or carrier root cause.</p>
         <aside class="triage-rationale" aria-label="Triage rationale for investigation candidates">
-          <div class="triage-intro">
-            <p class="section-kicker">Triage rationale</p>
-            <h3>Why these candidates appear</h3>
-            <p>Candidates surface when a seller-state, customer-state, and category combination has meaningful late-order volume plus late-rate context. Use this queue to decide where to investigate first, not to assign fault.</p>
-          </div>
+          <div class="triage-intro"><p class="section-kicker">Triage rationale</p><h3>Why these candidates appear</h3><p>Candidates surface when seller-state, customer-state, and category combinations show meaningful late-order volume plus late-rate context. Use this queue to decide where to investigate first, not to assign fault.</p></div>
           <div class="triage-grid">
-            <section class="triage-card">
-              <h4>Operations checks</h4>
-              <ul>
-                <li>Review delivery promise accuracy for highlighted lanes and categories.</li>
-                <li>Check seller fulfillment handoffs before changing operations policy.</li>
-                <li>Compare carrier lane or route patterns against missed SLA promises.</li>
-                <li>Validate with company-owned inventory snapshots before production stock decisions.</li>
-              </ul>
-            </section>
-            <section class="triage-card">
-              <h4>Evidence limits</h4>
-              <ul>
-                <li>Aggregate public data only.</li>
-                <li>Association, not causality.</li>
-                <li>Candidate queue, not blame list.</li>
-                <li>Proxy signal, not direct inventory proof.</li>
-              </ul>
-            </section>
-            <section class="triage-card proof-trail">
-              <h4>Proof trail</h4>
-              <div class="proof-links" aria-label="Candidate proof trail links">
-                <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Case study context</a>
-                <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA sizing evidence</a>
-                <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md">Candidate ranking artifact</a>
-              </div>
-            </section>
+            <section class="triage-card"><h4>Operations checks</h4><ul><li>Review delivery promise accuracy for highlighted lanes and categories.</li><li>Check seller fulfillment handoffs before changing operations policy.</li><li>Compare carrier lane or route patterns against missed SLA promises.</li><li>Validate with company-owned inventory snapshots before production stock decisions.</li></ul></section>
+            <section class="triage-card"><h4>Evidence limits</h4><ul><li>Aggregate public data only.</li><li>Association, not causality.</li><li>Candidate queue, not blame list.</li><li>Proxy signal, not direct inventory proof.</li></ul></section>
+            <section class="triage-card proof-trail"><h4>Proof trail</h4><div class="proof-links" aria-label="Candidate proof trail links"><a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md">Case study context</a><a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md">SLA sizing evidence</a><a href="https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md">Candidate ranking artifact</a></div></section>
           </div>
         </aside>
       </article>
     </section>
 
-    <section id="method-notes" class="panel notes">
-      <h2>How to read this</h2>
-      <ul>
-        <li>Use high late-order counts and late-rate segments as investigation candidates, not proof of root cause.</li>
-        <li>Review-score patterns show association with delivery delay, not single-cause proof.</li>
-        <li>Fulfillment-planning proxy signals require company inventory snapshots before production stock decisions.</li>
-      </ul>
+    <section id="method-notes" class="section notes">
+      <h2>How to read this.</h2>
+      <ul><li>Use high late-order counts and late-rate segments as investigation candidates, not proof of root cause.</li><li>Review-score patterns show association with delivery delay, not single-cause proof.</li><li>Fulfillment-planning proxy signals require company inventory snapshots before production stock decisions.</li></ul>
       <p id="build-note"></p>
     </section>
     <section id="error" class="error" hidden></section>
   </main>
-  <script src="./assets/js/app.js"></script>
   <footer class="footer"><p>Olist Delivery SLA Risk case study. Aggregate dashboard data only; raw data local-only and git-ignored.</p></footer>
 </body>
 </html>

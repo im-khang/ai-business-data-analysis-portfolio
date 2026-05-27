@@ -10,29 +10,31 @@
   <script src="assets/js/render-cards.js" defer></script>
 </head>
 <body>
-  <header class="hero">
-    <nav class="top-nav" aria-label="Portfolio navigation">
-      <a href="./">Portfolio</a>
-      <a href="#case-studies">Case studies</a>
-      <a href="#playbook">Playbook</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio" target="_blank" rel="noopener noreferrer">Repository</a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="top-nav" aria-label="Portfolio navigation">
+    <a href="./">Portfolio</a>
+    <a href="#case-studies">Case studies</a>
+    <a href="#playbook">Playbook</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="https://github.com/im-khang/ai-business-data-analysis-portfolio" target="_blank" rel="noopener noreferrer">Repository</a>
+  </nav>
+
+  <header class="hero" id="top">
     <div class="hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">AI-augmented analyst · Human-owned judgment</p>
         <h1>Analytics portfolio built like a decision system.</h1>
-        <p class="lead">Multi-case supply-chain and operations analytics: stakeholder pain, decision question, evidence, caveat, recommendation, and artifact link. AI supports thinking and drafting; analysis logic and validation stay human-owned.</p>
+        <p class="lead">Multi-case supply-chain and operations analytics: stakeholder pain, decision question, evidence, caveat, recommendation, and artifact link.</p>
         <div class="actions">
-          <a class="button primary" href="#case-studies">View portfolio proof</a>
-          <a class="button" href="demand-forecasting-replenishment/">Open Favorita dashboard</a>
-          <a class="button" href="inventory-stockout-overstock-analysis/">Open Olist dashboard</a>
+          <a class="button primary" href="#case-studies">View proof</a>
+          <a class="button" href="demand-forecasting-replenishment/">Favorita dashboard</a>
+          <a class="button" href="inventory-stockout-overstock-analysis/">Olist dashboard</a>
         </div>
       </div>
-      <aside class="proof-card glass" aria-label="Portfolio proof card">
-        <span class="label">Portfolio signal</span>
-        <h2>Two dashboards. One repeatable operating system.</h2>
-        <p>Forecast quality, replenishment assumptions, delivery SLA exposure, review-score association, and investigation-candidate triage — all presented with transparent evidence limits.</p>
+      <aside class="hero-card" aria-label="Portfolio proof card">
+        <p class="section-kicker">Portfolio signal</p>
+        <h2>Two dashboards. One operating system.</h2>
+        <p>Forecast quality, replenishment assumptions, delivery SLA exposure, review-score association, and investigation-candidate triage — all with visible evidence limits.</p>
         <div class="proof-metrics">
           <span><strong>2</strong> public case dashboards</span>
           <span><strong>19,210</strong> planner rows generated locally</span>
@@ -42,19 +44,19 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="section badges" aria-label="Portfolio focus badges">
-      <span>SQL analysis</span><span>Python pipelines</span><span>Forecast metrics</span><span>Planner queues</span><span>Evidence boundaries</span><span>Static dashboard products</span>
+      <span>SQL analysis</span><span>Python pipelines</span><span>Forecast metrics</span><span>Planner queues</span><span>Evidence boundaries</span><span>Static dashboards</span>
     </section>
 
     <section class="section proof-strip" aria-label="Proof strip">
       <article><strong>AI role</strong><span>Thinking partner and drafting accelerator.</span></article>
       <article><strong>Human role</strong><span>Logic, validation, interpretation, caveats, recommendations.</span></article>
-      <article><strong>Public-safe output</strong><span>Aggregate JSON, documentation, dashboard UI, reproducible code.</span></article>
+      <article><strong>Public-safe</strong><span>Aggregate JSON, documentation, dashboard UI, reproducible code.</span></article>
     </section>
 
-    <noscript><p class="section noscript-note">JavaScript is disabled; static portfolio case cards below remain available, but dynamic registry rendering is paused.</p></noscript>
-    <section class="section case-grid dark-chapter" id="case-studies" aria-label="Featured case studies" data-case-grid>
+    <noscript><p class="section noscript-note">JavaScript is disabled; static portfolio cards below remain available.</p></noscript>
+    <section class="section case-grid" id="case-studies" aria-label="Featured case studies" data-case-grid>
       <article class="case-card hero-case">
         <div>
           <p class="eyebrow">Demand planning case</p>
@@ -77,9 +79,11 @@
       </article>
     </section>
 
-    <section class="section playbook" id="playbook">
-      <p class="eyebrow">Analytical playbook</p>
-      <h2>Repeatable case logic</h2>
+    <section class="section" id="playbook">
+      <div class="section-heading">
+        <p class="section-kicker">Analytical playbook</p>
+        <h2>One template for every case.</h2>
+      </div>
       <div class="pillar-grid six">
         <article><h3>1. Pain</h3><p>Name stakeholder friction.</p></article>
         <article><h3>2. Question</h3><p>Convert issue into answerable decision question.</p></article>
@@ -90,21 +94,24 @@
       </div>
     </section>
 
-    <section class="section pillars" id="roadmap">
-      <p class="eyebrow">Roadmap</p>
-      <h2>Future analytics surfaces</h2>
+    <section class="section light-chapter" id="roadmap">
+      <div class="section-heading">
+        <p class="section-kicker">Roadmap</p>
+        <h2>Future analytics surfaces.</h2>
+      </div>
       <div class="pillar-grid">
         <article><h3>Demand planning</h3><p>Forecast baselines, promotion effects, bias monitoring, and exception governance.</p></article>
-        <article><h3>Inventory management</h3><p>Reorder risk, service levels, stock coverage, aging inventory, and replenishment scenarios with true inventory fields.</p></article>
+        <article><h3>Inventory management</h3><p>Reorder risk, service levels, stock coverage, aging inventory, and replenishment scenarios.</p></article>
         <article><h3>Warehouse operations</h3><p>Inbound flow, receiving bottlenecks, dock scheduling, supplier variability, and putaway readiness.</p></article>
         <article><h3>Control tower</h3><p>Connect procurement, fulfillment, logistics, customer experience, and operational KPIs.</p></article>
       </div>
     </section>
 
     <section class="section caveat">
-      <h2>Evidence boundaries</h2>
-      <p>Public dashboards use aggregate JSON only. Olist public data does not include direct stock-on-hand, replenishment, warehouse availability, backorder, stockout, or overstock fields. Favorita public dashboard uses planning assumptions, not production replenishment instructions. Results are decision-support artifacts, not unsupported causality or accountability claims.</p>
+      <h2>Evidence boundaries.</h2>
+      <p>Public dashboards use aggregate JSON only. Olist public data does not include direct stock-on-hand, replenishment, warehouse availability, backorder, stockout, or overstock fields. Favorita dashboard uses planning assumptions, not production replenishment instructions.</p>
     </section>
   </main>
+  <footer class="footer"><p>AI-Augmented Business Analytics Portfolio · Static GitHub Pages · Human-owned analysis logic.</p></footer>
 </body>
 </html>
