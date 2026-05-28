@@ -8,9 +8,9 @@ window.portfolioCases = [
     proof: ['Forecast metrics', 'Planner queue', 'Assumption caveats'],
     links: [
       {label: 'Dashboard', href: 'demand-forecasting-replenishment/'},
-      {label: 'Case study', href: 'https://github.com/im-khang/ai-business-data-analysis-portfolio/tree/master/case-studies/demand-forecasting-replenishment'},
+      {label: 'Case study', href: 'https://github.com/im-khang/data-analytics-stuff/tree/master/case-studies/demand-forecasting-replenishment'},
       {label: 'Build metadata', href: 'demand-forecasting-replenishment/assets/data/build_metadata.json'},
-      {label: 'Code', href: 'https://github.com/im-khang/ai-business-data-analysis-portfolio/tree/master/case-studies/demand-forecasting-replenishment'}
+      {label: 'Code', href: 'https://github.com/im-khang/data-analytics-stuff/tree/master/case-studies/demand-forecasting-replenishment'}
     ]
   },
   {
@@ -22,10 +22,10 @@ window.portfolioCases = [
     proof: ['96,470 delivered orders', '6.77% late rate', 'Candidate ranking'],
     links: [
       {label: 'Dashboard', href: 'inventory-stockout-overstock-analysis/'},
-      {label: 'Case study', href: 'https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md'},
-      {label: 'SLA summary', href: 'https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md'},
-      {label: 'Candidate ranking', href: 'https://github.com/im-khang/ai-business-data-analysis-portfolio/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md'},
-      {label: 'Code', href: 'https://github.com/im-khang/ai-business-data-analysis-portfolio/tree/master/case-studies/inventory-stockout-overstock-analysis'}
+      {label: 'Case study', href: 'https://github.com/im-khang/data-analytics-stuff/blob/master/case-studies/inventory-stockout-overstock-analysis/README.md'},
+      {label: 'SLA summary', href: 'https://github.com/im-khang/data-analytics-stuff/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md'},
+      {label: 'Candidate ranking', href: 'https://github.com/im-khang/data-analytics-stuff/blob/master/case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md'},
+      {label: 'Code', href: 'https://github.com/im-khang/data-analytics-stuff/tree/master/case-studies/inventory-stockout-overstock-analysis'}
     ]
   }
 ];

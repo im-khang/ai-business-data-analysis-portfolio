@@ -1,5 +1,8 @@
 # AI-Augmented Business Analytics Portfolio
 
+> Repository role: this repo is the analytics proof lab. It owns SQL/Python/notebooks, case-study source docs, aggregate JSON artifacts, reproducibility notes, and evidence trails. Recruiter-facing showcase pages and im-khang.com production live in `im-khang/portfolio-site`.
+
+
 <p align="center">
   <strong>Multi-case analytics portfolio for supply-chain and operations decisions</strong><br>
   Demand planning · delivery SLA risk · replenishment review · evidence boundaries · decision storytelling
