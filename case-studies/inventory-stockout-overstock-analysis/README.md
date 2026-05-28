@@ -10,7 +10,7 @@ Which sellers, categories, regions, and order patterns create the highest delive
 
 Start here:
 
-1. [Live Static Dashboard](https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/) — interactive GitHub Pages view of aggregate delivery SLA findings.
+1. [Live Static Dashboard](https://im-khang.com/cases/olist-delivery-sla-risk/) — production portfolio view of aggregate delivery SLA findings.
 2. `artifacts/kpi-tree.md` — KPI definitions, business interpretation, and action paths.
 3. `artifacts/assumptions.md` — data limitations and inventory proxy rules.
 4. `sql/00_schema_overview.sql` — source table map and join logic.

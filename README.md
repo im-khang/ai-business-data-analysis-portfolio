@@ -6,9 +6,9 @@
 </p>
 
 <p align="center">
-  <a href="https://im-khang.github.io/ai-business-data-analysis-portfolio/">Portfolio Homepage</a> ·
-  <a href="https://im-khang.github.io/ai-business-data-analysis-portfolio/demand-forecasting-replenishment/">Favorita Dashboard</a> ·
-  <a href="https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/">Olist Dashboard</a> ·
+  <a href="https://im-khang.com/">Portfolio Homepage</a> ·
+  <a href="https://im-khang.com/cases/favorita-planner-exception-queue/">Favorita Dashboard</a> ·
+  <a href="https://im-khang.com/cases/olist-delivery-sla-risk/">Olist Dashboard</a> ·
   <a href="case-studies/demand-forecasting-replenishment/README.md">Favorita Case</a> ·
   <a href="case-studies/inventory-stockout-overstock-analysis/README.md">Olist Case</a>
 </p>
@@ -31,10 +31,10 @@ AI is used as a thinking partner and drafting accelerator. Human judgment owns p
 
 | Case | Decision question | Portfolio proof | Links |
 |---|---|---|---|
-| **Favorita Demand Forecasting & Replenishment Review** | Which item/store/family combinations deserve planner attention first? | Forecast accuracy metrics, WAPE/MAE/Bias %, Forecast Score, FVA framing, ABC/XYZ segmentation, planner queue, transparent replenishment assumptions. | [Live dashboard](https://im-khang.github.io/ai-business-data-analysis-portfolio/demand-forecasting-replenishment/) · [Case study](case-studies/demand-forecasting-replenishment/README.md) · [Build metadata](docs/demand-forecasting-replenishment/assets/data/build_metadata.json) |
-| **Olist Delivery SLA Risk** | Which delivery SLA risks deserve operations attention first? | Multi-table ecommerce analysis, KPI design, delay-severity triage, review-score association, seller/category/region investigation queue, caveat-controlled recommendation writing. | [Live dashboard](https://im-khang.github.io/ai-business-data-analysis-portfolio/inventory-stockout-overstock-analysis/) · [Case study](case-studies/inventory-stockout-overstock-analysis/README.md) · [SLA summary](case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md) · [Candidate ranking](case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md) |
+| **Favorita Demand Forecasting & Replenishment Review** | Which item/store/family combinations deserve planner attention first? | Forecast accuracy metrics, WAPE/MAE/Bias %, Forecast Score, FVA framing, ABC/XYZ segmentation, planner queue, transparent replenishment assumptions. | [Live dashboard](https://im-khang.com/cases/favorita-planner-exception-queue/) · [Case study](case-studies/demand-forecasting-replenishment/README.md) · [Build metadata](docs/demand-forecasting-replenishment/assets/data/build_metadata.json) |
+| **Olist Delivery SLA Risk** | Which delivery SLA risks deserve operations attention first? | Multi-table ecommerce analysis, KPI design, delay-severity triage, review-score association, seller/category/region investigation queue, caveat-controlled recommendation writing. | [Live dashboard](https://im-khang.com/cases/olist-delivery-sla-risk/) · [Case study](case-studies/inventory-stockout-overstock-analysis/README.md) · [SLA summary](case-studies/inventory-stockout-overstock-analysis/artifacts/delivery-sla-summary.md) · [Candidate ranking](case-studies/inventory-stockout-overstock-analysis/artifacts/seller-category-region-risk.md) |
 
-[![Portfolio dashboard preview](assets/dashboard-preview.png)](https://im-khang.github.io/ai-business-data-analysis-portfolio/)
+[![Portfolio dashboard preview](assets/dashboard-preview.png)](https://im-khang.com/)
 
 ## Operating System for Each Case
 

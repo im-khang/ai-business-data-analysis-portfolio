@@ -8,7 +8,7 @@ Which item/store/family combinations need replenishment review first, and what r
 
 ## 🧭 Reviewer Guide
 
-1. [Live dashboard](https://im-khang.github.io/ai-business-data-analysis-portfolio/demand-forecasting-replenishment/) — Overview · Forecast Accuracy · Planner Queue · Assumptions.
+1. [Live dashboard](https://im-khang.com/cases/favorita-planner-exception-queue/) — Overview · Forecast Accuracy · Planner Queue · Assumptions.
 2. `dashboard/lib/metrics.py` — tested forecast metric formulas (WAPE, MAE, Bias %, Forecast Score, FVA).
 3. `notebooks/01_run_pipeline.py` — controlled Favorita slice → naïve + moving-average baselines → metrics → ABC/XYZ → safety stock + reorder point assumptions → ranked planner queue.
 4. `dashboard/export_pages_data.py` — aggregate JSON exporter with size + schema guards.
